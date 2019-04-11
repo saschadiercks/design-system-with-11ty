@@ -1,0 +1,32 @@
+{
+    "name": "Sascha Diercks",
+    "position": "Frontend Developer",
+    "email": "hi@saschadiercks.de",
+    "avatar": "/assets/images/avatar.jpg",
+    "social": {
+        "twitter": {
+            "name": "saschadiercks",
+            "url": "https://twitter.com/saschadiercks"
+        },
+        "github": {
+            "name": "saschadiercks",
+            "url": "https://github.com/saschadiercks"
+        },
+        "youtube": {
+            "name": "saschadiercks",
+            "url": "https://youtube.com/saschadiercks"
+        },
+        "letterboxd": {
+            "name": "saschadiercks",
+            "url": "https://letterboxd.com/saschadiercks/"
+        },
+        "linkedin": {
+            "name": "Sascha_Diercks",
+            "url": "https://www.linkedin.com/in/saschadiercks"
+        },
+        "xing": {
+            "name": "Sascha_Diercks",
+            "url": "https://www.xing.com/profile/Sascha_Diercks"
+        }
+    }
+}

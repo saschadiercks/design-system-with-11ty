@@ -1,0 +1,17 @@
+<!doctype html>
+<html class="no-js" dir="{% if dir %}{{dir}}{% else %}{{site.dir}}{% endif %}" lang="{% if lang %}{{lang}}{% else %}{{site.lang}}{% endif %}">
+<head>
+	{% include 'components/meta.njk' %}
+</head>
+<body id="sdi-{{layout}}">
+
+	<div class="sdi-wrapper">
+		{% include "components/header.njk" %}
+
+		{{ content | safe }}
+
+		{% include "components/footer.njk" %}
+	</div>
+
+</body>
+</html>

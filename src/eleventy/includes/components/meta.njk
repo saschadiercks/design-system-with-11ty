@@ -1,0 +1,15 @@
+<meta charset="utf-8" />
+<title>{% if title %}{{title}}{% else %}{{site.title}}{% endif %} | {{author.name}}</title>
+{% if description %}
+	<meta name="description" content="{{description}}" />
+{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="MSSmartTagsPreventParsing" content="TRUE" />
+<meta name="language" content="{% if lang %}{{lang}}{% else %}{{site.lang}}{% endif %}" />
+{% if keywords %}
+	<meta name="keywords" content="{{keywords}}" />
+{% endif %}
+<link rel="stylesheet" href="/assets/css/site.css" type="text/css">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon-foto-228x228.png">
