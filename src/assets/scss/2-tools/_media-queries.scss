@@ -1,0 +1,20 @@
+// Set your breakpoint here
+@mixin s {
+	@media (max-width: $sdi-m - 1px) { @content; }
+}
+
+@mixin m {
+	@media (min-width: $sdi-m) and (max-width: $sdi-l - 1px) { @content; }
+}
+
+@mixin m-up {
+	@media (min-width: $sdi-m) { @content; }
+}
+
+@mixin l {
+	@media (min-width: $sdi-l) { @content; }
+}
+
+@mixin xl {
+	@media (min-width: $sdi-xl) { @content; }
+}

@@ -1,0 +1,36 @@
+.#{$prefix}#{$container} {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $layout-gutter;
+	padding-right: $layout-gutter;
+}
+
+@if $container-max-width != "none" {
+	.#{$prefix}#{$container} {
+		max-width: $container-max-width;
+		width: 100%;
+	}
+}
+
+// Variations
+@if $container--narrow-max-width != "none" {
+	.#{$prefix}#{$container}.#{$prefix}#{$container}--narrow { max-width: $container--narrow-max-width; }
+}
+
+.#{$prefix}#{$container}.#{$prefix}#{$container}--wide { max-width: $container--wide-max-width; }
+
+// more gutter above mobile
+@include m-up {
+	.#{$prefix}#{$container} {
+		padding-left: $layout-gutter--m-up;
+		padding-right: $layout-gutter--m-up;
+	}
+}
+
+// Remove space in viewport on higher resolutions
+@include xl {
+	.#{$prefix}#{$container} {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

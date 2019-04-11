@@ -1,0 +1,13 @@
+.#{$prefix}center {
+	justify-content: center;
+	text-align: center;
+}
+
+@include s {
+	.#{$prefix}center--s {
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+// TODO: change to mixin

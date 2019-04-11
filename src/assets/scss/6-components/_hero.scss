@@ -1,0 +1,58 @@
+.#{$prefix}hero {
+	background-color: $hero-bg;
+	border-bottom: 1px solid $separator-color;
+	color: $hero-color;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	justify-content: center;
+	line-height: 1;
+	margin-bottom: $gutter;
+	padding-bottom: $gutter * 2;	// to compensate header-margin
+	padding-top: $gutter;
+}
+
+.#{$prefix}hero__title {
+	font-size: $herotitle-font-size;
+	text-transform: uppercase;
+}
+
+.#{$prefix}hero__text {
+	line-height: 1.2;
+	text-transform: initial;
+}
+
+.#{$prefix}hero__subtitle {
+	margin-bottom: $gutter--50;
+	order: -1;
+}
+
+.#{$prefix}hero__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.#{$prefix}hero--large {
+	text-transform: uppercase;
+
+	.#{$prefix}hero__title {
+		font-size: $herotitle-font-size--large;
+	}
+}
+
+@include m-up {
+	.#{$prefix}hero--large {
+		height: 90vh;
+		max-height: 500px;
+
+		.#{$prefix}hero__title {
+			font-size: $herotitle-font-size--large--m-up;
+		}
+	}
+
+	.#{$prefix}hero__title {
+		font-size: $herotitle-font-size--m-up;
+	}
+}
+
+// TODO: improve this

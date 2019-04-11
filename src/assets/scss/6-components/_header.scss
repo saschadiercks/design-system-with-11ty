@@ -1,0 +1,18 @@
+.#{$prefix}header {
+	background-color: $header-bg;
+	border-bottom: 1px solid $separator-color;
+	font-weight: 600;
+	margin-bottom: $header-gutter;
+	width: 100%;
+}
+
+.#{$prefix}header__content {
+	align-items: center;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+@include m-up {
+	.#{$prefix}header__content { flex-direction: row; }
+}

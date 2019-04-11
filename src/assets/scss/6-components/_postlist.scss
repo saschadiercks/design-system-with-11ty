@@ -1,0 +1,11 @@
+.#{$prefix}postlist__item {
+	margin-bottom: $gutter;
+}
+
+.#{$prefix}postlist__link {
+	text-decoration: none;
+}
+
+.#{$prefix}postlist__title {
+	margin-bottom: $gutter--25;
+}

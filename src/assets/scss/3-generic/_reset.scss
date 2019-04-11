@@ -1,0 +1,26 @@
+html {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+// Figure
+figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+img {
+	border-style: none;
+	height: auto;
+	max-width: 100%;
+}
+
+svg {
+	height: 100%;
+	width: 100%;
+}
+// Remove the default vertical scrollbar in IE 10+.
+textarea { overflow: auto; }

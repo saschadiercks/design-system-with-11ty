@@ -1,0 +1,11 @@
+// transform an element to cover the full-width
+// regardless if it's in a content with max-width
+
+@mixin full-width {
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+}

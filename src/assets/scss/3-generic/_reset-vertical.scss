@@ -1,0 +1,18 @@
+// reset margin to avoid margin-collapsing
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin-bottom: $line-height;
+	margin-top: 0;
+}
+
+// define default margin for p,ul
+//ul,
+//p { margin-top: $gutter--25; }
+//p:last-of-type { margin-bottom: 0; }

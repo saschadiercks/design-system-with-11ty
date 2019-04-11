@@ -1,0 +1,27 @@
+%hidden-default {
+	display: none;
+	z-index: -1;
+}
+// ---- js-hidden (Elements to be hidden via JS) ----
+.#{$prefix}js-hidden { @extend %hidden-default; }
+
+// ---- Elemts to be visually hidden ----
+// https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+// https://a11yproject.com/posts/how-to-hide-content/
+.#{$prefix}v-hidden {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+
+// ---- Hidden depending on viewport
+// Allways
+.#{$prefix}hidden { @extend %hidden-default; }
+
+// only visible on mobile
+@include m-up {
+	.#{$prefix}hidden--m-up { display: none; }
+}

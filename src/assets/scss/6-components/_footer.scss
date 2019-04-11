@@ -1,0 +1,40 @@
+.#{$prefix}footer {
+	background-color: $footer-bg;
+	color: $footer-color;
+	position: relative;
+	z-index: 1;
+}
+
+.#{$prefix}footer__link {
+	display: block;
+	padding: $gutter--25;
+}
+
+.#{$prefix}footer a:hover {
+	color: $footer-color;
+	opacity: .75;
+}
+
+.#{$prefix}footer__content {
+	align-items: center;
+}
+
+.#{$prefix}footer__item {
+	display: inline-block;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.#{$prefix}footer__item--author {
+	margin-left: $gutter--50;
+}
+
+.#{$prefix}footer__content--social {
+	justify-content: center;
+}
+
+@include m-up {
+	.#{$prefix}footer__content--social {
+		justify-content: flex-end;
+	}
+}

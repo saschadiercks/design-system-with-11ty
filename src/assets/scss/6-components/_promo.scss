@@ -1,0 +1,17 @@
+.#{$prefix}promo {
+	padding-bottom: $gutter--50;
+	padding-top: $gutter--50;
+}
+
+.#{$prefix}promo__heading {
+	margin-bottom: $gutter--50;
+}
+
+.#{$prefix}promo__item {
+	margin-bottom: $gutter;
+}
+
+.#{$prefix}promo--lit {
+	background-color: $promo-lit-bg;
+	color: $promo-lit-color;
+}

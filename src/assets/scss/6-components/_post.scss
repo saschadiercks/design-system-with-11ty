@@ -1,0 +1,7 @@
+// @if $post-max-witdh != "none" {
+// 	.#{$prefix}post {
+// 		max-width: $post-max-witdh;
+// 	}
+// }
+
+.#{$prefix}post__heading { line-height: 1.3; }

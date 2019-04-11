@@ -1,0 +1,53 @@
+.#{$prefix}navigation {
+	color: $navigation-color;
+	font-size: $navigation-font-size--m-up;
+}
+
+.#{$prefix}navigation__link {
+	display: block;
+	padding: $link-gutter;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+@include s {
+	.#{$prefix}navigation {
+		background-color: $nav-bg--s;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+		display: flex;
+		flex-direction: column;
+		font-size: $navigation-font-size;
+		height: 100vh;
+		justify-content: center;
+		left: 0;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		width: 75%;
+		z-index: 3;
+	}
+
+	.#{$prefix}navigation__list {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	// Toggle Navigation
+	.#{$prefix}trigger {
+		display: inline-block;
+		padding: $gutter--25;
+		position: relative;
+		z-index: 99;
+	}
+
+	.#{$prefix}trigger ~ .#{$prefix}navigation {
+		margin-left: -100%;
+		transition: margin-left .3s ease;
+	}
+
+	.#{$prefix}trigger:checked ~ .#{$prefix}trigger {
+		position: fixed;
+		top: 13px;	// TODO: Magic Number - remove
+	}
+	.#{$prefix}trigger:checked ~ .#{$prefix}navigation { margin-left: 0; }
+}

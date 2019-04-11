@@ -1,0 +1,12 @@
+body {
+	&::after {
+		border-top: $pseudo-footer-height solid $pseudo-footer-bg;
+		bottom: 0;
+		content: "";
+		display: block;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		will-change: transform;
+	}
+}

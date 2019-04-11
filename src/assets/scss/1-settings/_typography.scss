@@ -1,0 +1,27 @@
+$h1-font-size: 2rem !default;
+$h2-font-size: 1.5rem !default;
+$h3-font-size: 1.17rem !default;
+$h4-font-size: 1rem !default;
+$h5-font-size:	.75rem !default;
+$h6-font-size:	.5rem !default;
+$h7-font-size:	.5rem !default;
+
+$herotitle-font-size: 2rem !default;
+$herotitle-font-size--m-up: 3rem !default;
+
+$herotitle-font-size--large: 3rem !default;
+$herotitle-font-size--large--m-up: 5rem !default;
+
+$navigation-font-size: 1.5rem !default;
+$navigation-font-size--m-up: 1.125rem !default;
+
+// Custom fonts
+$import-fonts: (
+	all: "https://fonts.googleapis.com/css?family=Roboto|Merriweather:700"
+) !default;
+
+$font-family-body: "Roboto" !default;
+$font-family-headings: "Merriweather" !default;
+
+// set value for hyphens
+$hyphens: manual !default;

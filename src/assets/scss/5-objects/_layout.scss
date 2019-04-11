@@ -1,0 +1,42 @@
+.#{$prefix}layout {
+	align-content: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.#{$prefix}layout__item {
+	flex: 1 1 auto;
+}
+// TODO: refactor this and add breakpoint-classes as mixin
+
+@include m-up {
+	.#{$prefix}layout {
+		margin-left: $layout-gutter / -1;
+		margin-right: $layout-gutter / -1;
+	}
+
+	.#{$prefix}layout__item {
+		padding-left: $layout-gutter;
+		padding-right: $layout-gutter;
+	}
+
+	.#{$prefix}layout__item.#{$prefix}layout__item--100 {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+
+	.#{$prefix}layout__item.#{$prefix}layout__item--50 {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+
+	.#{$prefix}layout__item.#{$prefix}layout__item--33 {
+		flex-basis: 33%;
+		max-width: 33%;
+	}
+
+	.#{$prefix}layout__item.#{$prefix}layout__item--25 {
+		flex-basis: 25%;
+		max-width: 25%;
+	}
+}

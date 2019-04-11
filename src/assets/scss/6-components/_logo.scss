@@ -1,0 +1,21 @@
+.#{$prefix}logo {
+	margin-bottom: $gutter--50;
+	margin-top: $gutter--50;
+	vertical-align: middle;
+	width: $logo-width;
+}
+
+// Logo: inside the svg
+//.#{$logo-svg-path} { fill: $logo-color; }
+
+.#{$prefix}logo.#{$prefix}logo--small {
+	height: $logo-height--s;
+	width: $logo-width--s;
+}
+
+@include s {
+	.#{$prefix}logo {
+		height: $logo-height--s;
+		width: $logo-width--s;
+	}
+}
