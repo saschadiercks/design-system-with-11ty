@@ -52,11 +52,10 @@ gulp.task('clean', function () {
 });
 
 // ---- copy content ----
-gulp.task('copyImages', function () {
+gulp.task('copyContent', function () {
 	return gulp.src([
-		config.src + '/eleventy/pages/**/*.' + config.imgExt,
-		config.assetSrc + '/images/*.' + config.imgExt])
-	.pipe(gulp.dest(config.assetDist + '/images'));
+		config.assetSrc + '/3rdparty/**/*'])
+	.pipe(gulp.dest(config.assetDist + '/3rdparty'));
 });
 
 gulp.task('copyRoot', function () {
@@ -135,7 +134,7 @@ gulp.task('minify', () => {
 
 
 // --- build ----
-gulp.task('copy', gulp.series('copyImages', 'copyRoot'));
+gulp.task('copy', gulp.series('copyContent', 'copyRoot'));
 gulp.task('lint', gulp.series('lint-css'));
 gulp.task('build:css', gulp.series('clean', 'lint-css', 'compile:css'));
 gulp.task('serve', gulp.series('clean', 'lint-css', 'compile:css', 'compile:js','svgSprite' , 'copy', 'eleventyServe'));
