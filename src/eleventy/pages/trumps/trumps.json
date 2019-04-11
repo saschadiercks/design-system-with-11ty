@@ -1,7 +1,0 @@
-{
-	"layout": "home",
-	"tags": "nav",
-	"navtitle": "Trumps",
-	"permalink": "trumps/{{ title | slug }}/index.html",
-	"title": "Trumps"
-}
