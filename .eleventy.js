@@ -19,6 +19,10 @@ module.exports = function(config) {
 	// Layouts
 	config.addLayoutAlias('base',			'layouts/base.njk')
 	config.addLayoutAlias('home',			'layouts/home.njk')
+	config.addLayoutAlias('components',		'layouts/components.njk')
+	config.addLayoutAlias('elements',		'layouts/components.njk')
+	config.addLayoutAlias('objects',		'layouts/components.njk')
+	config.addLayoutAlias('trumps',			'layouts/components.njk')
 
 	// Base Config
 	return {

@@ -1,0 +1,20 @@
+---
+layout: base
+---
+<main class="sdi-main">
+	<div class="sdi-container">
+		<div class="sdi-layout">
+
+			<div class="sdi-layout__item sdi-layout__item--25">
+				{% set itemlist = collections.components %}
+				{% include 'components/sidebar.njk' %}
+			</div>
+
+			<div class="sdi-layout__item">
+				{{ content | safe }}
+			</div>
+
+		</div>
+
+	</div>
+</main>
