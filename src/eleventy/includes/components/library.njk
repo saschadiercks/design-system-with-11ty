@@ -17,6 +17,7 @@
 								andd use the parentdrectory as an identifier
 							#}
 							<section id="{{ item | get_parentdirectory }}">
+								<h2>{{ item | get_parentdirectory }}</h2>
 
 								{# code and preview #}
 								{%- include "components/code/preview.njk" -%}

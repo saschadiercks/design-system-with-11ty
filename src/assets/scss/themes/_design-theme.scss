@@ -1,3 +1,19 @@
+section {
+	background-color: #eaeaea;
+	border-radius: 1rem;
+	padding: .75rem;
+}
+
+code {
+	background-color: #ddd;
+	border-radius: 3px;
+	display: inline-block;
+	font-family: "Fira Code", Courier, "Courier New", monospace;
+	font-size: .75rem;
+	padding: 0 2px;
+	vertical-align: middle;
+}
+
 .#{$prefix}example {
 	border-bottom: 1px solid #ccc;
 	margin-bottom: $gutter;
@@ -12,14 +28,4 @@
 .#{$prefix}example .#{$prefix}layout__item {
 	border: 1px solid #ccc;
 	margin-bottom: 1px;
-}
-
-.#{$prefix}example .code {
-	background-color: #ddd;
-	border-radius: 3px;
-	display: inline-block;
-	font-family: "Fira Code", Courier, "Courier New", monospace;
-	font-size: .75rem;
-	padding: 0 2px;
-	vertical-align: middle;
 }
