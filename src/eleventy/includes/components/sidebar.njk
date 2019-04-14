@@ -1,5 +1,14 @@
-<ul class="sdi-ui-list sdi-ui-list--vertical">
-	{% for item in itemlist %}
-		<li class="sdi-navigation__list-item"><a href="{{ item.url }}">{{ item.url }}</a></li>
-	{% endfor %}
-</ul>
+<nav class="sdi-sticky">
+	<ul class="sdi-ui-list sdi-ui-list--vertical">
+		{% for item in itemlist | reverse %}
+			{#
+				we only want to list items, where a description.md exists (even if it's empty)
+				the description holds the name of the code-snippet
+			#}
+
+			{% if item | get_filename == "description.md" %}
+				<li class="sdi-navigation__list-item"><a href="#{{ item.data.title }}">{{ item.data.title }}</a></li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</nav>

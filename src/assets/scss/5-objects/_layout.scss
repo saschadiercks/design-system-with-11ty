@@ -39,4 +39,9 @@
 		flex-basis: 25%;
 		max-width: 25%;
 	}
+
+	.#{$prefix}layout__item.#{$prefix}layout__item--75 {
+		flex-basis: 75%;
+		max-width: 75%;
+	}
 }

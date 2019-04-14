@@ -1,0 +1,10 @@
+{# we dont want the desciption.md to be displayed #}
+{% if item | get_filename != "description.md" %}
+	{# we are now searching for the programming language to set it for prism #}
+	{% set language = item | get_suffix %}
+
+	<div class="sdi-code">
+		<pre><code class="language-{{ language }}">{{ item.templateContent }}</code></pre>
+	</div>
+{% endif %}
+

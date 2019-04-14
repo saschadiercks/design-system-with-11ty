@@ -1,0 +1,7 @@
+{# we dont want the desciption.md to be displayed #}
+{% if item | get_filename != "description.md" %}
+
+	<div class="sdi-preview">
+		{{ item.templateContent | safe }}
+	</div>
+{% endif %}

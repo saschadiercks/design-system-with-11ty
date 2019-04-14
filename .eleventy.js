@@ -1,30 +1,38 @@
-const filters = require('./src/eleventy/_eleventy/filters.js');
+module.exports = function(eleventyConfig) {
 
-module.exports = function(config) {
-	// Filters
-	Object.keys(filters).forEach(filterName => {
-		config.addFilter(filterName, filters[filterName])
-	})
+	eleventyConfig.addFilter("get_suffix", function(page) {
+		const path = page.inputPath.split('.')
+		//return path[path.length - 2]
+		return path[path.length - 1]
+	});
 
-	config.addShortcode("icon", function(iconName) {
-		const spriteUrl = '/assets/images/icon-sprite.svg'
-		const iconId = '#icon-' + iconName
-		const href = spriteUrl + iconId
+	eleventyConfig.addFilter("get_filename", function(page) {
+		const path = page.inputPath.split('/')
+		return path[path.length - 1]
+	});
 
-		return `<svg class="sdi-icon sdi-icon--${iconName}" role="img" aria-hidden="true" width="24" height="24">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="${href}"></use>
-				</svg>`
+	eleventyConfig.addFilter("get_parentdirectory", function(page) {
+		const path = page.inputPath.split('/')
+		return path[path.length - 2]
+	});
+
+	eleventyConfig.addFilter("combine_path", function(page) {
+		const path = page.inputPath.split('/')
+		const file_length = path[path.length - 1].length
+		const path_length = page.inputPath.length - file_length
+		const full_path = page.inputPath.substr(0, path_length) + "description.md"
+		return full_path;
 	});
 
 	// Layouts
-	config.addLayoutAlias('base',			'layouts/base.njk')
-	config.addLayoutAlias('home',			'layouts/home.njk')
-	config.addLayoutAlias('components',		'layouts/components.njk')
-	config.addLayoutAlias('elements',		'layouts/components.njk')
-	config.addLayoutAlias('objects',		'layouts/components.njk')
-	config.addLayoutAlias('trumps',			'layouts/components.njk')
+	eleventyConfig.addLayoutAlias('base',			'layouts/base.njk')
+	eleventyConfig.addLayoutAlias('home',			'layouts/home.njk')
+	eleventyConfig.addLayoutAlias('components',		'layouts/components.njk')
+	eleventyConfig.addLayoutAlias('elements',		'layouts/elements.njk')
+	eleventyConfig.addLayoutAlias('objects',		'layouts/objects.njk')
+	eleventyConfig.addLayoutAlias('trumps',			'layouts/trumps.njk')
 
-	// Base Config
+	// Base eleventyConfig
 	return {
 		dir: {
 			input: './src/eleventy',
@@ -32,7 +40,7 @@ module.exports = function(config) {
 			includes: 'includes',	// ⚠️ This value is relative to your input directory.
 			data: 'data'			// ⚠️ This value is relative to your input directory.
 		},
-		templateFormats: ['njk', 'md'],
+		templateFormats: ['njk', 'md', 'html'],
 		htmlTemplateEngine: 'njk',
 		markdownTemplateEngine: 'njk',
 		passthroughFileCopy: true
