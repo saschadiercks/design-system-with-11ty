@@ -58,4 +58,4 @@ Here's a list of available tasks
 - `gulp build:css` rebuilds the CSS
 
 ## Code Highlighting
-We're using [prism.js](https://github.com/PrismJS/prism) to highlight the code. The nesseccary files are included in this repository. If you want to change the styling head to https://prismjs.com/ and download the files you want. After that place them in `src/assets/3rdparty/prism`and run `gulp build`
+We're using [prism.js](https://github.com/PrismJS/prism) to highlight the code. The nesseccary files are included in this repository. If you want to change the styling head to [https://prismjs.com/](https://prismjs.com/) and download the files you want. After that place them in `src/assets/3rdparty/prism` and run `gulp build`
