@@ -1,14 +1,15 @@
 <nav class="sdi-sticky">
 	<ul class="sdi-ui-list sdi-ui-list--vertical">
-		{% for item in itemlist | reverse %}
+		{% for item in itemlist %}
 			{#
 				we only want to list items, where a description.md exists (even if it's empty)
-				the description holds the name of the code-snippet
+				and we're using the parent directory-name as an anchor
 			#}
 
 			{% if item | get_filename == "description.md" %}
-				<li class="sdi-navigation__list-item"><a href="#{{ item.data.title }}">{{ item.data.title }}</a></li>
+				<li class="sdi-navigation__list-item"><a href="#{{ item.data.title }}">{{ item | get_parentdirectory }}</a></li>
 			{% endif %}
+
 		{% endfor %}
 	</ul>
 </nav>

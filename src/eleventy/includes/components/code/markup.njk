@@ -1,6 +1,6 @@
 {# we are now searching for the programming language to set it for prism #}
 {% set language = item | get_suffix %}
 
-<div class="sdi-code">
+<div class="sdi-code"  id="{{ item | get_parentdirectory }}__markup">
 	<pre><code class="language-{{ language }}">{{ item.templateContent }}</code></pre>
 </div>

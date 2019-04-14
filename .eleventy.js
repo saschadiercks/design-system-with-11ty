@@ -16,14 +16,6 @@ module.exports = function(eleventyConfig) {
 		return path[path.length - 2]
 	});
 
-	eleventyConfig.addFilter("combine_path", function(page) {
-		const path = page.inputPath.split('/')
-		const file_length = path[path.length - 1].length
-		const path_length = page.inputPath.length - file_length
-		const full_path = page.inputPath.substr(0, path_length) + "description.md"
-		return full_path;
-	});
-
 	// Layouts
 	eleventyConfig.addLayoutAlias('base',			'layouts/base.njk')
 	eleventyConfig.addLayoutAlias('home',			'layouts/home.njk')
