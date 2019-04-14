@@ -7,7 +7,7 @@
 			#}
 
 			{% if item | get_filename == "description.md" %}
-				<li class="sdi-navigation__list-item"><a href="#{{ item.data.title }}">{{ item | get_parentdirectory }}</a></li>
+				<li class="sdi-navigation__list-item"><a href="#{{ item | get_parentdirectory }}">{{ item | get_parentdirectory }}</a></li>
 			{% endif %}
 
 		{% endfor %}
