@@ -1,7 +1,3 @@
-{# we only want the desciption.md to be displayed #}
-{% if item | get_filename == "description.md" %}
-	<div class="sdi-description" id="{{ item.data.title }}">
-		{{ item.templateContent | safe }}
-	</div>
-{% endif %}
-
+<div class="sdi-description" id="{{ item.data.title }}">
+	{{ item.templateContent | safe }}
+</div>

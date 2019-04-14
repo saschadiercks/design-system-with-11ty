@@ -13,16 +13,18 @@ layout: base
 			<div class="sdi-layout__item sdi-layout__item--75">
 
 				{%- for item in itemlist -%}
-					{# we dont want the desciption.md to be displayed #}
-					{%- if item | get_filename != "description.md" -%}
-						<section id="{{ item | get_parentdirectory }}">
+					<section id="{{ item | get_parentdirectory }}">
+						{# we dont want the desciption.md to be displayed #}
+						{% if item | get_filename != "description.md" %}
 							{%- include "components/code/preview.njk" -%}
-							{# %- include "components/code/description.njk" -% #}
 							{%- include "components/code/markup.njk" -%}
-							{%- set description_file = item | combine_path -%}
+						{% endif %}
 
-						</section>
-					{%- endif -%}
+						{# we only want the desciption.md to be displayed #}
+						{% if item | get_filename == "description.md" %}
+							{%- include "components/code/description.njk" -%}
+						{% endif %}
+					</section>
 				{%- endfor -%}
 
 			</div>
