@@ -1,31 +1,6 @@
 ---
 layout: base
 ---
-<main class="sdi-main">
-	<div class="sdi-container">
-		<div class="sdi-layout">
 
-			<div class="sdi-layout__item sdi-layout__item--25">
-				{% set itemlist = collections.trumps %}
-				{% include 'components/sidebar.njk' %}
-			</div>
-
-			<div class="sdi-layout__item">
-
-				{%- for item in itemlist -%}
-					{# we dont want the desciption.md to be displayed #}
-					{% if item | get_filename != "description.md" %}
-						<section id="{{ item | get_parentdirectory }}">
-							{% include 'components/code/preview.njk' %}
-							{# % include 'components/code/description.njk' % #}
-							{% include 'components/code/markup.njk' %}
-						</section>
-					{% endif %}
-				{%- endfor -%}
-
-			</div>
-
-		</div>
-
-	</div>
-</main>
+{% set itemlist = collections.trumps %}
+{% include 'components/library.njk' %}

@@ -1,0 +1,31 @@
+<main class="sdi-main">
+	<div class="sdi-container">
+		<div class="sdi-layout">
+
+			<div class="sdi-layout__item sdi-layout__item--25">
+				{% include 'components/sidebar.njk' %}
+			</div>
+
+			<div class="sdi-layout__item sdi-layout__item--75">
+
+				{%- for item in itemlist -%}
+					<section id="{{ item | get_parentdirectory }}">
+						{# we dont want the desciption.md to be displayed #}
+						{% if item | get_filename != "description.md" %}
+							{%- include "components/code/preview.njk" -%}
+							{%- include "components/code/markup.njk" -%}
+						{% endif %}
+
+						{# we only want the desciption.md to be displayed #}
+						{% if item | get_filename == "description.md" %}
+							{%- include "components/code/description.njk" -%}
+						{% endif %}
+					</section>
+				{%- endfor -%}
+
+			</div>
+
+		</div>
+
+	</div>
+</main>
