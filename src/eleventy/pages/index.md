@@ -77,11 +77,11 @@ date: 2019-01-01
 <hr/>
 
 <h2>Classnames / Variables</h2>
-<p>All <b>classnames</b> belonging to this design-system are prefixed, so we can mix it with another framework and distinguish just by looking at the class names. This might become handy. The default-prefix is <span class="code">sdi-</span> and it is set in <span class="code">1-settings/variables</span>. Classnames of containers and wrappers can be set there too - but you should propably not change them here to be updateable. They are  set with <span class="code">!default</span> so they are acting as a fallback.</p>
-<p>The CSS is structured using <b>BEM</b> and <b>ITCSS</b> - as you might have guessed. All variables are set using <span class="code">!default</span>, to make copying the Code and customizing it easy. If your comfortable using scss it should be easy for you to overwrite the values with your own vlaues in an additonal file.</p>
-<p>We are using <b>classnames with numbers</b>, to reflect percentage-values. e.g. <span class="code">sdi-layout__item--50</span> => this item has a width of 50%.</p>
-<p><b>Breakpoints</b> or variations depending on device-width are using calssnames like <span class="code">sdi-center--s</span>. This means, the content is only centered on mobile devices (breakpointname is "s"). The breakpoints are defined in <span class="code">1-settings/breakpoints</span> and are using the exact same letters.</p>
-<p>It's a work in progress - but I'll release it, as soon as possible.</p>
+<p>All <b>classnames</b> belonging to this design-system are prefixed, so we can mix it with another framework and distinguish just by looking at the class names. This might become handy. The default-prefix is <code>sdi-</code> and it is set in "code>1-settings/variables</code>. Classnames of containers and wrappers can be set there too - but you should propably not change them here to be updateable. They are  set with <code>!default</span> so they are acting as a fallback.</p>
+<p>The CSS is structured using <b>BEM</b> and <b>ITCSS</b> - as you might have guessed. All variables are set using "code>!default</span>, to make copying the Code and customizing it easy. If your comfortable using scss it should be easy for you to overwrite the values with your own vlaues in an additonal file.</p>
+<p>We are using <b>classnames with numbers</b>, to reflect percentage-values. e.g. <code>sdi-layout__item--50</code> => this item has a width of 50%.</p>
+<p><b>Breakpoints</b> or variations depending on device-width are using classnames like <code>sdi-center--s</code>. This means, the content is only centered on mobile devices (breakpointname is "s"). The breakpoints are defined in <code>1-settings/breakpoints</code> and are using the exact same letters.</p>
+<p>It's a work in progress...</p>
 
 <hr/>
 
