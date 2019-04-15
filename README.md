@@ -27,7 +27,7 @@ Opening this folder, you might notice, there are folders using the ITCSS-Names (
 - 4-elements
 - 5-objects
 - 6-components
-- 7-trumps
+- 7-utilities
 - themes (not ITCSS but used to edit some styles for the documentation)
 
 In any of these folders (except "themes"), there are the files needed for the documentation.

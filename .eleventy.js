@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addLayoutAlias('components',		'layouts/components.njk')
 	eleventyConfig.addLayoutAlias('elements',		'layouts/elements.njk')
 	eleventyConfig.addLayoutAlias('objects',		'layouts/objects.njk')
-	eleventyConfig.addLayoutAlias('trumps',			'layouts/trumps.njk')
+	eleventyConfig.addLayoutAlias('utilities',		'layouts/utilities.njk')
 
 	// Base eleventyConfig
 	return {

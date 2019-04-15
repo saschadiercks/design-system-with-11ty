@@ -62,13 +62,13 @@ date: 2019-01-01
 	<div class="sdi-layout__item sdi-layout__item--25">
 		<div class="sdi-card">
 			<h2 class="h3 sdi-card__header">
-				Trumps
+				Utilities
 			</h2>
 			<p class="sdi-card__main">
 				Classes like full-width, hidden and other helpers
 			</p>
 			<div class="sdi-card__footer">
-				<a href="/trumps" class="sdi-card__button sdi-button">show trumps</a>
+				<a href="/utilities" class="sdi-card__button sdi-button">show utilities</a>
 			</div>
 		</div>
 	</div>
@@ -103,7 +103,7 @@ Opening this folder, you might notice, there are folders using the ITCSS-Names (
 - 4-elements
 - 5-objects
 - 6-components
-- 7-trumps
+- 7-utilities
 - themes (not ITCSS but used to edit some styles for the documentation)
 
 In any of these folders (except "themes"), there are the files needed for the documentation.
