@@ -1,3 +1,1 @@
----
-title: card
----
+Cards are useful containers to group content.
