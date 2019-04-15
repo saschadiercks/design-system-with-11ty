@@ -13,8 +13,70 @@ date: 2019-01-01
 		<h1 class="sdi-hero__title">This is a design system documentation powered by <a href="https://github.com/11ty/eleventy">eleventy</a></h1>
 		<p class="sdi-hero__text">It is structured using <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">ITCSS</a> and uses <a href="http://getbem.com/">BEM</a> for the styling.</p>
 		<a class="sdi-button" href="https://github.com/saschadiercks/sdi-design-system">View on github</a>
+		<a class="sdi-button sdi-button--secondary" href="https://saschadiercks.de">View it in action</a>
 	</div>
 </div>
+
+<h2 class="sdi-center">Jump directly to...</h2>
+
+<div class="sdi-layout">
+	<div class="sdi-layout__item sdi-layout__item--25">
+		<div class="sdi-card">
+			<h2 class="h3 sdi-card__header">
+				Elements
+			</h2>
+			<p class="sdi-card__main">
+				Styling of elements like links, headings and so on.
+			</p>
+			<div class="sdi-card__footer">
+				<a href="" class="sdi-card__button sdi-button">show elements</a>
+			</div>
+		</div>
+	</div>
+	<div class="sdi-layout__item sdi-layout__item--25">
+		<div class="sdi-card">
+			<h2 class="h3 sdi-card__header">
+				Objects
+			</h2>
+			<p class="sdi-card__main">
+				Grids, Wrappers, UI-List are defined here
+			</p>
+			<div class="sdi-card__footer">
+				<a href="" class="sdi-card__button sdi-button">show objects</a>
+			</div>
+		</div>
+	</div>
+	<div class="sdi-layout__item sdi-layout__item--25">
+		<div class="sdi-card">
+			<h2 class="h3 sdi-card__header">
+				Components
+			</h2>
+			<p class="sdi-card__main">
+				The builiding blocks of your site like buttons, cards...
+			</p>
+			<div class="sdi-card__footer">
+				<a href="" class="sdi-card__button sdi-button">show components</a>
+			</div>
+		</div>
+	</div>
+	<div class="sdi-layout__item sdi-layout__item--25">
+		<div class="sdi-card">
+			<h2 class="h3 sdi-card__header">
+				Trumps
+			</h2>
+			<p class="sdi-card__main">
+				Classes like full-width, hidden and other helpers
+			</p>
+			<div class="sdi-card__footer">
+				<a href="" class="sdi-card__button sdi-button">show trumps</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr/>
+
+<!-- README starts here -->
 
 ## The Story
 Some time ago I decided to redesign my personal website and remove things like wordpress.
@@ -66,6 +128,7 @@ I'm using gulp as a task runner so you need node.js and gulp.
 
 Here's a list of available tasks
 - `gulp serve` runs eleventy and starts the watcher
+- `gulp update` lints and recompiles CSS & JS. Calls the copy-function too
 - `gulp build` runs eleventy and all build tasks without starting it
 - `gulp copy` to copy required files (normally not required to run manually)
 - `gulp lint`lints your scss using stylelint

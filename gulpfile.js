@@ -138,4 +138,5 @@ gulp.task('copy', gulp.series('copyContent', 'copyRoot'));
 gulp.task('lint', gulp.series('lint-css'));
 gulp.task('build:css', gulp.series('clean', 'lint-css', 'compile:css'));
 gulp.task('serve', gulp.series('clean', 'lint-css', 'compile:css', 'compile:js','svgSprite' , 'copy', 'eleventyServe'));
+gulp.task('update', gulp.series('lint-css', 'compile:css', 'compile:js','svgSprite' , 'copy'));
 gulp.task('build', gulp.series('clean', 'lint-css', 'compile:css', 'compile:js', 'svgSprite', 'copy', 'imagemin', 'eleventyGenerate', 'minify'));
