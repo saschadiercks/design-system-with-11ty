@@ -63,6 +63,11 @@ gulp.task('copyRoot', function () {
 	.pipe(gulp.dest(config.dist));
 });
 
+gulp.task('copySCSSto11ty', function () {
+	return gulp.src([
+		config.assetSrc + '/scss/**/*'])
+	.pipe(gulp.dest(config.src + '/eleventy/pages'));
+});
 
 // ---- images ---
 gulp.task('imagemin', function () {
