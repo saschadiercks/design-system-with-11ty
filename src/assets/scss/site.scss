@@ -19,6 +19,7 @@
 @import "3-generic/box-sizing";
 @import "3-generic/font-smoothing";
 @import "3-generic/page";
+@import "3-generic/pseudo-footer";
 @import "3-generic/reset";
 @import "3-generic/reset-vertical";
 @import "3-generic/sticky-footer";
@@ -54,7 +55,6 @@
 @import "6-components/post";
 @import "6-components/postlist";
 @import "6-components/promo";
-@import "6-components/pseudo-footer";
 
 // Utilities
 @import "7-utilities/full-width";
