@@ -12,7 +12,7 @@ date: 2019-01-01
 	<div class="sdi-container sdi-center">
 		<h1 class="sdi-hero__title">This is a design system documentation powered by <a href="https://github.com/11ty/eleventy">eleventy</a></h1>
 		<p class="sdi-hero__text">It is structured using <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">ITCSS</a> and uses <a href="http://getbem.com/">BEM</a> for the styling.</p>
-		<a class="sdi-button" href="https://github.com/saschadiercks/sdi-design-system">View on github</a>
+		<a class="sdi-button" href="https://github.com/saschadiercks/design-system-with-11ty">View on github</a>
 		<a class="sdi-button sdi-button--secondary" href="https://saschadiercks.de">View it in action</a>
 	</div>
 </div>
