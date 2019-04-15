@@ -14,12 +14,15 @@ $neutral: #aaa !default;
 $link-color: inherit !default;
 $link-hover-color: $brand-color !default;
 
+// border-color
+$border-color: #ccc !default;
+
 // Separator
-$separator-color: #ccc !default;
+$separator-color: $border-color !default;
 
 // Header
 $header-bg: $bg !default;
-$header-border-color: $separator-color;
+$header-border-color: $border-color;
 
 // Logo
 $logo-color: currentColor !default;

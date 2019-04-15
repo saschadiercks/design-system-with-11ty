@@ -1,4 +1,20 @@
 .#{$prefix}card {
-	align-items: center;
+	border: 1px solid $border-color;
+	display: flex;
+	flex-direction: column;
 	margin-bottom: $gutter;
+	padding: $card-padding;
+	text-align: center;
+}
+
+.#{$prefix}card__header {
+	align-self: top;
+}
+
+.#{$prefix}card__footer {
+	align-self: bottom;
+}
+
+.#{$prefix}card__button {
+	display: block;
 }
