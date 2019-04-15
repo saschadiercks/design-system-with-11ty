@@ -21,6 +21,7 @@
 @import "3-generic/page";
 @import "3-generic/reset";
 @import "3-generic/reset-vertical";
+@import "3-generic/sticky-footer";
 
 // Elements
 @import "4-elements/figure";
@@ -60,7 +61,6 @@
 @import "7-utilities/hidden";
 @import "7-utilities/margin";
 @import "7-utilities/sticky";
-@import "7-utilities/sticky-footer";
 
 // SHAME - Place dirty fixes here
 @import "7-utilities/shame";
