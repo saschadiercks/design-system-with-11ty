@@ -14,18 +14,22 @@ code {
 	vertical-align: middle;
 }
 
-.#{$prefix}example {
+.#{$prefix}preview {
 	border-bottom: 1px solid #ccc;
 	margin-bottom: $gutter;
 	padding-bottom: $gutter;
 }
 
-.#{$prefix}example .#{$prefix}container {
+.#{$prefix}preview ul + ul {
+	margin-top: $gutter;
+}
+
+.#{$prefix}preview .#{$prefix}container {
 	border: 1px solid #ccc;
 	padding-bottom: $gutter--25;
 }
 
-.#{$prefix}example .#{$prefix}layout__item {
+.#{$prefix}preview .#{$prefix}layout__item {
 	border: 1px solid #ccc;
 	margin-bottom: 1px;
 }

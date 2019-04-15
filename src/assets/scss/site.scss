@@ -35,7 +35,6 @@
 @import "5-objects/container";
 @import "5-objects/layout";
 @import "5-objects/media";
-@import "5-objects/sticky-footer";
 @import "5-objects/ui-list";
 @import "5-objects/wrapper";
 
@@ -61,6 +60,7 @@
 @import "7-utilities/hidden";
 @import "7-utilities/margin";
 @import "7-utilities/sticky";
+@import "7-utilities/sticky-footer";
 
 // SHAME - Place dirty fixes here
 @import "7-utilities/shame";

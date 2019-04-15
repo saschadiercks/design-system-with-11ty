@@ -17,7 +17,9 @@
 	.#{$prefix}#{$container}.#{$prefix}#{$container}--narrow { max-width: $container--narrow-max-width; }
 }
 
-.#{$prefix}#{$container}.#{$prefix}#{$container}--wide { max-width: $container--wide-max-width; }
+@if $container--wide-max-width != "none" {
+	.#{$prefix}#{$container}.#{$prefix}#{$container}--wide { max-width: $container--wide-max-width; }
+}
 
 // more gutter above mobile
 @include m-up {

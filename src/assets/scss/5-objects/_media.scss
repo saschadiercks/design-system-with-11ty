@@ -6,16 +6,18 @@
 	justify-content: flex-start;
 }
 
-.#{$prefix}media.#{$prefix}media--reversed {
-	flex-direction: row-reverse;
-	justify-content: flex-end;
-}
-
 .#{$prefix}media .#{$prefix}media__object {
 	margin-right: $gutter;
 }
 
-.#{$prefix}media--reversed .#{$prefix}media__object {
-	margin-left: $gutter;
-	margin-right: 0;
+@include m-up {
+	.#{$prefix}media.#{$prefix}media--reversed {
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+	}
+
+	.#{$prefix}media--reversed .#{$prefix}media__object {
+		margin-left: $gutter;
+		margin-right: 0;
+	}
 }
