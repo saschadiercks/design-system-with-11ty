@@ -29,7 +29,7 @@ date: 2019-01-01
 				Styling of elements like links, headings and so on.
 			</p>
 			<div class="sdi-card__footer">
-				<a href="" class="sdi-card__button sdi-button">show elements</a>
+				<a href="/elements" class="sdi-card__button sdi-button">show elements</a>
 			</div>
 		</div>
 	</div>
@@ -42,7 +42,7 @@ date: 2019-01-01
 				Grids, Wrappers, UI-List are defined here
 			</p>
 			<div class="sdi-card__footer">
-				<a href="" class="sdi-card__button sdi-button">show objects</a>
+				<a href="/objects" class="sdi-card__button sdi-button">show objects</a>
 			</div>
 		</div>
 	</div>
@@ -55,7 +55,7 @@ date: 2019-01-01
 				The builiding blocks of your site like buttons, cards...
 			</p>
 			<div class="sdi-card__footer">
-				<a href="" class="sdi-card__button sdi-button">show components</a>
+				<a href="/components" class="sdi-card__button sdi-button">show components</a>
 			</div>
 		</div>
 	</div>
@@ -68,7 +68,7 @@ date: 2019-01-01
 				Classes like full-width, hidden and other helpers
 			</p>
 			<div class="sdi-card__footer">
-				<a href="" class="sdi-card__button sdi-button">show trumps</a>
+				<a href="/trumps" class="sdi-card__button sdi-button">show trumps</a>
 			</div>
 		</div>
 	</div>
