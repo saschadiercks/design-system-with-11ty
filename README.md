@@ -55,7 +55,7 @@ Here's a list of available tasks
 - `gulp update` lints and recompiles CSS & JS. Calls the copy-function too
 - `gulp build` runs eleventy and all build tasks without starting it
 - `gulp copy` to copy required files (normally not required to run manually)
-- `gulp lint`lints your scss using stylelint
+- `gulp lint` lints your scss using stylelint (it's very strict)
 - `gulp build:css` rebuilds the CSS
 
 ## Code Highlighting
