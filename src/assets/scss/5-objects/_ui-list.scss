@@ -8,3 +8,5 @@
 .#{$prefix}ui-list.#{$prefix}ui-list--vertical {
 	flex-direction: column;
 }
+
+.#{$prefix}ui-list__link { text-decoration: none; }
