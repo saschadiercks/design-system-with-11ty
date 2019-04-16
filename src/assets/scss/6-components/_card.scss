@@ -1,5 +1,6 @@
 .#{$prefix}card {
 	border: 1px solid $border-color;
+	border-radius: $card-radius;
 	display: flex;
 	flex-direction: column;
 	margin-bottom: $gutter;
