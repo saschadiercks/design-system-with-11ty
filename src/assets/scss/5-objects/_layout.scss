@@ -25,6 +25,11 @@
 		max-width: 100%;
 	}
 
+	.#{$prefix}layout__item.#{$prefix}layout__item--75 {
+		flex-basis: 75%;
+		max-width: 75%;
+	}
+
 	.#{$prefix}layout__item.#{$prefix}layout__item--50 {
 		flex-basis: 50%;
 		max-width: 50%;
@@ -38,10 +43,5 @@
 	.#{$prefix}layout__item.#{$prefix}layout__item--25 {
 		flex-basis: 25%;
 		max-width: 25%;
-	}
-
-	.#{$prefix}layout__item.#{$prefix}layout__item--75 {
-		flex-basis: 75%;
-		max-width: 75%;
 	}
 }
