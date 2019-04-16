@@ -10,6 +10,14 @@
 	text-transform: uppercase;
 }
 
+.#{$prefix}navigation--vertical {
+	.#{$prefix}navigation__list { border-top: 1px solid $border-color; }
+	.#{$prefix}navigation__link { display: block; }
+	.#{$prefix}navigation__item { border-bottom: 1px solid $border-color; }
+}
+
+// TODO: improve overlay for mobile (eg. use own utility-class for slideout)
+
 @include s {
 	.#{$prefix}navigation {
 		background-color: $nav-bg--s;

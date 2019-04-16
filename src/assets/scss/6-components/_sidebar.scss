@@ -1,0 +1,16 @@
+.#{$prefix}linklist__item {
+	margin-bottom: $gutter;
+}
+
+.#{$prefix}linklist__link {
+	text-decoration: none;
+}
+
+.#{$prefix}linklist__tag {
+	display: inline-block;
+	margin-bottom: $gutter--25;
+}
+
+.#{$prefix}linklist__title {
+	margin-bottom: 0;
+}

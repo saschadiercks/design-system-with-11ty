@@ -32,9 +32,13 @@
 
 						{# we only want the desciption.md to be displayed #}
 						{% if item | get_filename == "description.md" %}
+
+								<hr/>
+
+								<h3 class="sdi-margin-bottom--25">When to use</h3>
 								{%- include "components/code/description.njk" -%}
 
-								<span class="sdi-meta">Last modified: {{ latest_date | readable_date }}</span>
+								<p class="h5 sdi-time sdi-margin-bottom--0">Last modified: {{ latest_date | readable_date }}</p>
 
 							{# we need to CLOSE the SECTION here to group the snippets #}
 							</section>

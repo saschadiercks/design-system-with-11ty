@@ -1,6 +1,6 @@
 section {
-	background-color: #eaeaea;
-	border-radius: 1rem;
+	border: 1px dashed #ccc;
+	border-radius: .25rem;
 	padding: .75rem;
 }
 
@@ -9,15 +9,17 @@ code {
 	border-radius: 3px;
 	display: inline-block;
 	font-family: "Fira Code", Courier, "Courier New", monospace;
-	font-size: .75rem;
+	font-size: .75rem !important;
 	padding: 0 2px;
 	vertical-align: middle;
 }
 
+.#{$prefix}code { margin-bottom: $gutter; }
+
+.#{$prefix}description p + p { margin-top: $gutter * -.75; }
+
 .#{$prefix}preview {
-	border-bottom: 1px solid #ccc;
 	margin-bottom: $gutter;
-	padding-bottom: $gutter;
 }
 
 .#{$prefix}preview ul + ul {
@@ -26,7 +28,7 @@ code {
 
 .#{$prefix}preview .#{$prefix}container {
 	border: 1px solid #ccc;
-	padding-bottom: $gutter--25;
+	margin-bottom: $gutter--25;
 }
 
 .#{$prefix}preview .#{$prefix}layout__item {
