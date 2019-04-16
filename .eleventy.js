@@ -1,8 +1,13 @@
+const { DateTime } = require('luxon');
+
 module.exports = function(eleventyConfig) {
+
+	eleventyConfig.addFilter("readable_date", function(date) {
+		return DateTime.fromJSDate(date).toFormat('dd LLL yyyy')
+	});
 
 	eleventyConfig.addFilter("get_suffix", function(page) {
 		const path = page.inputPath.split('.')
-		//return path[path.length - 2]
 		return path[path.length - 1]
 	});
 

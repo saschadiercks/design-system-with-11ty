@@ -16,6 +16,8 @@
 
 						{# we dont want the desciption.md to be displayed #}
 						{% if item | get_filename != "description.md" %}
+							{% set latest_date = item.date %}
+
 							{#
 								we need to OPEN the SECTION here to group the snippets
 								andd use the parentdrectory as an identifier
@@ -31,6 +33,9 @@
 						{# we only want the desciption.md to be displayed #}
 						{% if item | get_filename == "description.md" %}
 								{%- include "components/code/description.njk" -%}
+
+								<span class="sdi-meta">Last modified: {{ latest_date | readable_date }}</span>
+
 							{# we need to CLOSE the SECTION here to group the snippets #}
 							</section>
 						{% endif %}
