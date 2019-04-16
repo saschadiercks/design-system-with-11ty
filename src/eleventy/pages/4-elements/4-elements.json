@@ -1,4 +1,7 @@
 {
 	"tags": "elements",
-	"layout": "elements"
+	"layout": "elements",
+	"date": "Last Modified",
+	"hero_title": "Elements",
+	"hero_text": "Elements are fundamental to every website. We're styling them early on, so we can easily overwrite them with classes - when needed"
 }

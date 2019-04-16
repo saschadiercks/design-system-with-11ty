@@ -1,4 +1,7 @@
 {
 	"tags": "utilities",
-	"layout": "utilities"
+	"layout": "utilities",
+	"date": "Last Modified",
+	"hero_title": "Utilities",
+	"hero_text": "Utility classes are used to define or even overwrite properties defined earlier in the cascade. This is the only place '!important' is allowed!"
 }

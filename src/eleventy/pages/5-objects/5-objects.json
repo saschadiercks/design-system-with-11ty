@@ -1,5 +1,7 @@
 {
 	"tags": "objects",
 	"layout": "objects",
-	"date": "Last Modified"
+	"date": "Last Modified",
+	"hero_title": "Objects",
+	"hero_text": "Objects are used to structure the content. They have no styling attached!"
 }

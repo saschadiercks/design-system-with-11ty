@@ -1,0 +1,12 @@
+{% if (hero_title) or (hero_text) %}
+	<div class="sdi-hero sdi-full-width">
+		<div class="sdi-container sdi-center">
+			{% if hero_title %}
+				<h1 class="sdi-hero__title">Viewing: {{ hero_title }}</h1>
+			{% endif %}
+			{% if hero_text %}
+				<p class="sdi-hero__text sdi-margin-bottom--0 sdi-container sdi-container--narrow">{{ hero_text }}</p>
+			{% endif %}
+		</div>
+	</div>
+{% endif %}
