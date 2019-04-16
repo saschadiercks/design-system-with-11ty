@@ -8,12 +8,16 @@
 
 			<div class="sdi-layout__item sdi-layout__item--75">
 
-				{%- for item in itemlist -%}
+				{#
+					we are sorting collections manually via js on prebuild,
+					so we can safely split the content depending on filetype here
+				#}
+				{% for item in itemlist %}
 
 						{# we dont want the desciption.md to be displayed #}
 						{% if item | get_filename != "description.md" %}
 							{#
-								we need to OPEN the tag here to group the snippets
+								we need to OPEN the SECTION here to group the snippets
 								andd use the parentdrectory as an identifier
 							#}
 							<section id="{{ item | get_parentdirectory }}">
@@ -27,11 +31,11 @@
 						{# we only want the desciption.md to be displayed #}
 						{% if item | get_filename == "description.md" %}
 								{%- include "components/code/description.njk" -%}
-							{# we need to CLOSE the tag here to group the snippets #}
+							{# we need to CLOSE the SECTION here to group the snippets #}
 							</section>
 						{% endif %}
 
-				{%- endfor -%}
+				{% endfor %}
 
 			</div>
 

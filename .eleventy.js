@@ -16,6 +16,35 @@ module.exports = function(eleventyConfig) {
 		return path[path.length - 2]
 	});
 
+	// sort collections alphabetically
+	eleventyConfig.addCollection("elements", function(collection) {
+		collection_new = collection.getFilteredByGlob("**/4-elements/*/*.*")
+		return collection_new.sort(function(a, b) {
+			return a.inputPath.localeCompare(b.inputPath)
+		  });
+	});
+
+	eleventyConfig.addCollection("components", function(collection) {
+		collection_new = collection.getFilteredByGlob("**/6-components/*/*.*")
+		return collection_new.sort(function(a, b) {
+			return a.inputPath.localeCompare(b.inputPath)
+		  });
+	});
+
+	eleventyConfig.addCollection("objects", function(collection) {
+		collection_new = collection.getFilteredByGlob("**/5-objects/*/*.*")
+		return collection_new.sort(function(a, b) {
+			return a.inputPath.localeCompare(b.inputPath)
+		  });
+	});
+
+	eleventyConfig.addCollection("utilities", function(collection) {
+		collection_new = collection.getFilteredByGlob("**/7-utilities/*/*.*")
+		return collection_new.sort(function(a, b) {
+			return a.inputPath.localeCompare(b.inputPath)
+		  });
+	});
+
 	// Layouts
 	eleventyConfig.addLayoutAlias('base',			'layouts/base.njk')
 	eleventyConfig.addLayoutAlias('home',			'layouts/home.njk')
