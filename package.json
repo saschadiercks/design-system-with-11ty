@@ -1,10 +1,10 @@
 {
-  "name": "saschadiercks.de",
+  "name": "design-system-with-11ty",
   "version": "1.0.0",
-  "description": "Personal Homepage",
+  "description": "This is a design system documentation powered by eleventy",
   "main": "gulpfile.js",
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1",
+    "@11ty/eleventy": "^0.8.2",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.1.1",
@@ -25,9 +25,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saschadiercks/saschadiercks.de/"
+    "url": "git+https://github.com/saschadiercks/design-system-with-11ty/"
   },
   "author": "Sascha Diercks",
-  "license": "ISC",
-  "homepage": "https://github.com/saschadiercks/saschadiercks.de"
+  "license": "MIT",
+  "homepage": "https://github.com/saschadiercks/design-system-with-11ty/"
 }
