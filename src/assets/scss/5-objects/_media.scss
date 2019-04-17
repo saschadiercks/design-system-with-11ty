@@ -17,7 +17,7 @@
 	}
 
 	.#{$prefix}media--reversed .#{$prefix}media__object {
-		margin-left: $gutter;
-		margin-right: 0;
+		margin-left: 0;
+		margin-right: $gutter;
 	}
 }
