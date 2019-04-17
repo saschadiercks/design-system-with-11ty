@@ -58,6 +58,12 @@ gulp.task('copyContent', function () {
 	.pipe(gulp.dest(config.assetDist + '/3rdparty'));
 });
 
+gulp.task('copyImages', function () {
+	return gulp.src([
+		config.assetSrc + '/images/**/*'])
+	.pipe(gulp.dest(config.assetDist + '/images'));
+});
+
 gulp.task('copyRoot', function () {
 	return gulp.src(config.src + '/*.*', { dot: true })
 	.pipe(gulp.dest(config.dist));
@@ -139,7 +145,7 @@ gulp.task('minify', () => {
 
 
 // --- build ----
-gulp.task('copy', gulp.series('copyContent', 'copyRoot'));
+gulp.task('copy', gulp.series('copyImages', 'copyContent', 'copyRoot'));
 gulp.task('lint', gulp.series('lint-css'));
 gulp.task('build:css', gulp.series('clean', 'lint-css', 'compile:css'));
 gulp.task('serve', gulp.series('clean', 'lint-css', 'compile:css', 'compile:js','svgSprite' , 'copy', 'eleventyServe'));
