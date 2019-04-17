@@ -19,7 +19,7 @@ date: 2019-01-01
 
 <h2 class="sdi-center">Jump directly to...</h2>
 
-<div class="sdi-layout">
+<div class="sdi-layout sdi-margin-bottom--200">
 	<div class="sdi-layout__item sdi-layout__item--25">
 		<div class="sdi-card">
 			<h2 class="h3 sdi-card__header">
