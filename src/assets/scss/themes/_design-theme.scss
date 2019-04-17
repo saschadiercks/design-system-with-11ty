@@ -10,12 +10,15 @@ section {
 
 pre { font-size: .75rem !important; }
 
-.#{$prefix}code { margin-bottom: $gutter; }
+.#{$prefix}code {
+	margin-bottom: $gutter;
+}
 
 .#{$prefix}description p + p { margin-top: $gutter * -.75; }
 
 .#{$prefix}preview {
 	margin-bottom: $gutter;
+	position: relative;
 }
 
 .#{$prefix}preview ul + ul {

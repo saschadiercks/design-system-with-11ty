@@ -1,0 +1,24 @@
+.#{$prefix}scroll-top {
+	align-items: center;
+	background-color: $scroll-top-bg;
+	border-radius: $scroll-top-radius;
+	bottom: $gutter;
+	color: $scroll-top-color;
+	display: flex;
+	height: $scroll-top-size;
+	position: fixed;
+	right: $gutter--50;
+	text-align: center;
+	text-decoration: none;
+	width: $scroll-top-size;
+	z-index: 1;
+}
+
+.#{$prefix}scroll-top__icon {
+	flex: 1;
+}
+
+.#{$prefix}scroll-top:hover {
+	background-color: $scroll-top-hover-bg;
+	color: $scroll-top-hover-color;
+}
