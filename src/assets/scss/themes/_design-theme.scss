@@ -8,15 +8,7 @@ section {
 	padding: .75rem;
 }
 
-code {
-	background-color: #ddd;
-	border-radius: 3px;
-	display: inline-block;
-	font-family: "Fira Code", Courier, "Courier New", monospace;
-	font-size: .75rem !important;
-	padding: 0 2px;
-	vertical-align: middle;
-}
+pre { font-size: .75rem !important; }
 
 .#{$prefix}code { margin-bottom: $gutter; }
 
