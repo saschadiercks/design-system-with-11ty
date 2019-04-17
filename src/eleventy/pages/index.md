@@ -8,7 +8,7 @@ keywords: Frontend, SASS, CSS, HTML, Gulp, Design System, Pattern Library
 date: 2019-01-01
 ---
 
-<div class="sdi-hero sdi-full-width">
+<div class="sdi-hero sdi-full-width sdi-margin-bottom--200">
 	<div class="sdi-container sdi-center">
 		<h1 class="sdi-hero__title">This is a design system documentation powered by <a href="https://github.com/11ty/eleventy">eleventy</a></h1>
 		<p class="sdi-hero__text">It is structured using <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">ITCSS</a> and uses <a href="http://getbem.com/">BEM</a> for the styling.</p>

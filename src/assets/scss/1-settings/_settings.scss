@@ -14,6 +14,7 @@ $line-height: 1.5rem !default;		// 1.5 * 16 = 24px
 
 // Whitespace
 $gutter: $line-height !default;
+$gutter--200: $gutter * 2 !default;
 $gutter--50: $gutter / 2 !default;
 $gutter--25: $gutter / 4 !default;
 
