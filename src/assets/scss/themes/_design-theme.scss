@@ -35,3 +35,7 @@ code {
 	border: 1px solid #ccc;
 	margin-bottom: 1px;
 }
+
+:target {
+	border-color: $brand-color;
+}
