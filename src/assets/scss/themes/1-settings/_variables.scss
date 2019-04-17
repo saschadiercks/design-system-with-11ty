@@ -1,1 +1,13 @@
 // place values to overwrite here
+
+// Change the prefix of classname here
+$prefix: "sdi-";
+
+// the fowwing classes get prefixed too
+$wrapper:	"wrapper";		// wraps the whole page
+$container:	"container";	// wraps content of page (inside of header, main footer...)
+
+// overwrite layout-classes with own names
+// this way you could use bootstrap-classes, if you wish
+$layout: "#{$prefix}layout";				// bootstrap: row
+$layout__item: "#{$prefix}layout__item";	// bootstrap: col
