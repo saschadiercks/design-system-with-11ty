@@ -1,0 +1,8 @@
+// We have to adapt some CSS for mobile, so the site gets responsive
+
+@include s {
+	code[class*="language-"],
+	pre[class*="language-"] { white-space: inherit !important; }
+
+	.token { display: inline !important; }
+}
