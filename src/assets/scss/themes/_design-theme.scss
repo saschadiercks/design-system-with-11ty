@@ -35,6 +35,20 @@ pre { font-size: .75rem !important; }
 	margin-bottom: 1px;
 }
 
+@keyframes highlight {
+	0% {
+		box-shadow: 0;
+		transform: scale(1);
+	}
+
+	50% {
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+		transform: scale(1.05);
+	}
+}
+
 :target {
+	animation-duration: .5s;
+	animation-name: highlight;
 	border-color: $brand-color;
 }
