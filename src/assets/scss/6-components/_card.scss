@@ -19,3 +19,11 @@
 .#{$prefix}card__button {
 	display: block;
 }
+
+.#{$prefix}card--border-0 {
+	border-width: 0;
+}
+
+.#{$prefix}card--lit {
+	background-color: $card-lit-bg;
+}
