@@ -52,8 +52,8 @@ $icon-fill: currentColor !default;
 $icon-max-width: 32px !default;
 
 // Card
-$card-radius: $radius;
-$card-padding: $gutter--50;
+$card-radius: $radius !default;
+$card-padding: $gutter--50 !default;
 
 // Code
 $code-background-color: #efeae7 !default;
@@ -61,6 +61,9 @@ $code-radius: $radius !default;
 $code-color: currentColor !default;
 $code-font-size: .75rem !default;
 $code-font-family: "Fira Code", courier, "Courier New", monospace !default;
+
+// Media
+$media-gutter: $gutter / 2 !default;
 
 // Scroll top
 $scroll-top-radius: $radius !default;
