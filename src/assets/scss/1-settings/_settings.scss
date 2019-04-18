@@ -1,10 +1,11 @@
-// Max-width of page
-$page-max-width: none !default;
+// Max-width of page and content
+$page-max-width: none !default;			// max-width for the whole page
+$content-max-width: 1200px !default;	// default width of website-content
 
 // Container-widths
-$container-max-width: 1200px !default;		// default width of website-content
-$container--narrow-max-width: 640px !default;	// Max-Width of narrow-content e.g. posts (smaller sizes improve reading on wider screens)
-$container--wide-max-width: none !default;	// Max width for content to stand out e.g. hero-teaser
+$container-max-width: $content-max-width !default;	// default width of website-content
+$container--narrow-max-width: 640px !default;		// Max-Width of narrow-content e.g. posts (smaller sizes improve reading on wider screens)
+$container--wide-max-width: none !default;			// Max width for content to stand out e.g. hero-teaser
 
 // these are your basic type-setting (applied to html)
 $font-family: sans-serif !default;	// we'll use this as our fallback-font
