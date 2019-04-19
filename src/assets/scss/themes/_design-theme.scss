@@ -30,9 +30,10 @@ pre { font-size: .75rem !important; }
 	margin-bottom: $gutter--25;
 }
 
-.#{$prefix}preview .#{$prefix}layout__item {
+.#{$prefix}preview .#{$prefix}layout__item div {
 	border: 1px solid #ccc;
 	margin-bottom: 1px;
+	padding: 2px;
 }
 
 @keyframes highlight {

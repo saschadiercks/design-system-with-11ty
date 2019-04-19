@@ -14,12 +14,15 @@
 }
 
 @include m-up {
-	.#{$layout__item} { flex: 1 1 auto; }
+	.#{$layout__item} {
+		flex: 1 1 auto;
+		width: auto;
+	}
 
 	// this itm is always 100% so this is listed for documentation only
-	//.#{$layout__item}.#{$layout__item}--100 {
-	//	width: 100%;
-	//}
+	.#{$layout__item}.#{$layout__item}--100 {
+		width: 100%;
+	}
 
 	.#{$layout__item}.#{$layout__item}--75 {
 		width: 75%;
