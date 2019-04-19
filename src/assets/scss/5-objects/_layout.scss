@@ -2,46 +2,38 @@
 	align-content: flex-start;
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: $layout-gutter / -1;
+	margin-right: $layout-gutter / -1;
 }
 
 .#{$layout__item} {
-	flex: 1 1 auto;
+	flex: none;
+	padding-left: $layout-gutter;
+	padding-right: $layout-gutter;
+	width: 100%;
 }
-// TODO: refactor this and add breakpoint-classes as mixin
 
 @include m-up {
-	.#{$layout} {
-		margin-left: $layout-gutter / -1;
-		margin-right: $layout-gutter / -1;
-	}
+	.#{$layout__item} { flex: 1 1 auto; }
 
-	.#{$layout__item} {
-		padding-left: $layout-gutter;
-		padding-right: $layout-gutter;
-	}
-
-	.#{$layout__item}.#{$layout__item}--100 {
-		flex-basis: 100%;
-		max-width: 100%;
-	}
+	// this itm is always 100% so this is listed for documentation only
+	//.#{$layout__item}.#{$layout__item}--100 {
+	//	width: 100%;
+	//}
 
 	.#{$layout__item}.#{$layout__item}--75 {
-		flex-basis: 75%;
-		max-width: 75%;
+		width: 75%;
 	}
 
 	.#{$layout__item}.#{$layout__item}--50 {
-		flex-basis: 50%;
-		max-width: 50%;
+		width: 50%;
 	}
 
 	.#{$layout__item}.#{$layout__item}--33 {
-		flex-basis: 33%;
-		max-width: 33%;
+		width: 33.333%;
 	}
 
 	.#{$layout__item}.#{$layout__item}--25 {
-		flex-basis: 25%;
-		max-width: 25%;
+		width: 25%;
 	}
 }
