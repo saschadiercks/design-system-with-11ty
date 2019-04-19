@@ -1,1 +1,1 @@
-If you add this class to an element, it becomes sticky, using the <code>display: sticky</code> property. Works without js in modern browsers. If nessecary use feature-detection to add this behavior to older browsers via js.
+Adding this class to an element, it becomes sticky, using the <code>display: sticky</code> property. Works without js in modern browsers. If nessecary we could use feature-detection to add this behavior to older browsers via js.

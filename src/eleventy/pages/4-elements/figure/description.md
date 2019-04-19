@@ -1,1 +1,1 @@
-Figure is used to display images. You can extend it with figcaption.
+Figure is used to display images. we can extend it with figcaption to add an description.

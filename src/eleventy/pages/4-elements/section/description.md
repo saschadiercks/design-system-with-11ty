@@ -1,1 +1,1 @@
-Use a section, when you want your content/article to be sliced into several topics.
+We can use a section to slice our content/article into several topics.
