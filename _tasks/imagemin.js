@@ -1,13 +1,15 @@
 /* #### Setting #### */
-const config = './_config.json'
+const config = require('./_config.json')
 const gulp = require('gulp')
 const imagemin = require('gulp-imagemin')
+
+const imgExt = "{jpg,png,svg}"
 
 /* ################# */
 /* ##### Tasks ##### */
 /* ################# */
 gulp.task('imagemin', function () {
-	return gulp.src(config.assetDist + '/**/*.' + config.imgExt)
+	return gulp.src(config.assetDist + '/**/*.' + imgExt)
 		.pipe(imagemin([
 			imagemin.jpegtran({progressive: true}),
 			imagemin.optipng({optimizationLevel: 5}),

@@ -1,6 +1,6 @@
 /* #### Setting #### */
-require('require-dir')('./_tasks')
 const gulp = require('gulp')
+require('require-dir')('./_tasks')
 
 /* ################# */
 /* ##### Tasks ##### */

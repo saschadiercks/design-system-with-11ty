@@ -1,5 +1,5 @@
 /* #### Setting #### */
-const config = './_config.json'
+const config = require('./_config.json')
 const gulp = require('gulp')
 const sass = require('gulp-sass')
 const gulpStylelint = require('gulp-stylelint')
@@ -19,7 +19,7 @@ gulp.task('compile:css', function () {
 });
 
 // lint
-gulp.task('lint:css', function lintCssTask() {
+gulp.task('lint:css', function () {
 	return gulp.src(config.assetSrc + '/scss/**/*.scss')
 	.pipe(gulpStylelint({
 		reporters: [

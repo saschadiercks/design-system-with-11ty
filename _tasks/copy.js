@@ -1,5 +1,5 @@
 /* #### Setting #### */
-const config = './_config.json'
+const config = require('./_config.json')
 const gulp = require('gulp')
 
 
