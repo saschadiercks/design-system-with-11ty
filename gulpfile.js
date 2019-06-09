@@ -1,3 +1,13 @@
+/* #### Setting #### */
+const gulp = require('gulp')
+
+require('require-dir')('./_tasks')
+
+
+/* ############### */
+/* #### Tasks #### */
+/* ############### */
+
 // Dependencies
 const gulp = require('gulp');
 const shell = require('gulp-shell');
