@@ -6,7 +6,7 @@ import removeClass from "./functions/removeClass.js";
 document.addEventListener('DOMContentLoaded', function() {
 
 	// Toggle HTML
-	const html = document.getElementsByTagName("html")[0];
+	const html = document.querySelector("html");
 	addClass(html,'js');
 	removeClass(html,'no-js');
 });
