@@ -2,13 +2,13 @@
 
 <main class="sdi-main">
 	<div class="sdi-container">
-		<div class="sdi-layout">
+		<div class="sdi-row">
 
-			<div class="sdi-layout__item sdi-layout__item--25 sdi-sidebar">
+			<div class="sdi-col sdi-col--25 sdi-sidebar">
 				{% include 'components/partials/sidebar-navigation.njk' %}
 			</div>
 
-			<div class="sdi-layout__item sdi-layout__item--75">
+			<div class="sdi-col sdi-col--75">
 
 				{#
 					we are sorting collections manually via js on prebuild,

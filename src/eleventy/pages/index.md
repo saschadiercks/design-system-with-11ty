@@ -19,8 +19,8 @@ date: 2019-01-01
 
 <h2 class="sdi-center">Jump directly to...</h2>
 
-<div class="sdi-layout sdi-margin-bottom--200">
-	<div class="sdi-layout__item sdi-layout__item--25">
+<div class="sdi-row sdi-margin-bottom--200">
+	<div class="sdi-col sdi-col--25">
 		<div class="sdi-card">
 			<h2 class="h3 sdi-card__header">
 				Elements
@@ -33,7 +33,7 @@ date: 2019-01-01
 			</div>
 		</div>
 	</div>
-	<div class="sdi-layout__item sdi-layout__item--25">
+	<div class="sdi-col sdi-col--25">
 		<div class="sdi-card">
 			<h2 class="h3 sdi-card__header">
 				Objects
@@ -46,7 +46,7 @@ date: 2019-01-01
 			</div>
 		</div>
 	</div>
-	<div class="sdi-layout__item sdi-layout__item--25">
+	<div class="sdi-col sdi-col--25">
 		<div class="sdi-card">
 			<h2 class="h3 sdi-card__header">
 				Components
@@ -59,7 +59,7 @@ date: 2019-01-01
 			</div>
 		</div>
 	</div>
-	<div class="sdi-layout__item sdi-layout__item--25">
+	<div class="sdi-col sdi-col--25">
 		<div class="sdi-card">
 			<h2 class="h3 sdi-card__header">
 				Utilities
@@ -79,7 +79,7 @@ date: 2019-01-01
 <h2>Classnames / Variables</h2>
 <p>All <b>classnames</b> belonging to this design-system are prefixed, so we can mix it with another framework and distinguish just by looking at the class names. This might become handy. The default-prefix is <code>sdi-</code> and it is set in <code>1-settings/variables</code>. Classnames of containers and wrappers can be set there too - but you should propably not change them here to be updateable. They are  set with <code>!default</code> so they are acting as a fallback.</p>
 <p>The CSS is structured using <b>BEM</b> and <b>ITCSS</b> - as you might have guessed. All variables are set using <code>!default</code>, to make copying the Code and customizing it easy. If your comfortable using scss it should be easy for you to overwrite the values with your own vlaues in an additonal file.</p>
-<p>We are using <b>classnames with numbers</b>, to reflect percentage-values. e.g. <code>sdi-layout__item--50</code> => this item has a width of 50%.</p>
+<p>We are using <b>classnames with numbers</b>, to reflect percentage-values. e.g. <code>sdi-col--50</code> => this item has a width of 50%.</p>
 <p><b>Breakpoints</b> or variations depending on device-width are using classnames like <code>sdi-center--s</code>. This means, the content is only centered on mobile devices (breakpointname is "s"). The breakpoints are defined in <code>1-settings/breakpoints</code> and are using the exact same letters.</p>
 <p>It's a work in progress...</p>
 

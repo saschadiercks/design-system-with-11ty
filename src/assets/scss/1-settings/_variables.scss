@@ -11,5 +11,5 @@ $container:	"container" !default;	// wraps content of page (inside of header, ma
 
 // overwrite layout-classes with own names
 // this way you could use bootstrap-classes, if you wish
-$layout: "#{$prefix}layout" !default;				// bootstrap: row
-$layout__item: "#{$prefix}layout__item" !default;	// bootstrap: col
+$row: "#{$prefix}row" !default;				// bootstrap: row
+$col: "#{$prefix}col" !default;	// bootstrap: col

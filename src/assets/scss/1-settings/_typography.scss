@@ -17,11 +17,11 @@ $navigation-font-size--m-up: 1.125rem !default;
 
 // Custom fonts
 $import-fonts: (
-	all: "https://fonts.googleapis.com/css?family=Roboto|Merriweather:700"
+	all: "https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap'"
 ) !default;
 
-$font-family-body: "Roboto" !default;
-$font-family-headings: "Merriweather" !default;
+$font-family-body: "Open Sans", sans-serif !default;
+$font-family-headings: "Open Sans", sans-serif !default;
 
 // set value for hyphens
-$hyphens: manual !default;
+$hyphens: none !default;
