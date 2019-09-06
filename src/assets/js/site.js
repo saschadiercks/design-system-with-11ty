@@ -1,12 +1,16 @@
 // #### imports ####
-import addClass from "./functions/addClass.js";
-import removeClass from "./functions/removeClass.js";
+import setJsAvailability from "./components/setJsAvailability.js";
 
-// #### run ####
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
+// is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
-	// Toggle HTML
-	const html = document.querySelector("html");
-	addClass(html,'js');
-	removeClass(html,'no-js');
+	// --- Toggle JS Availability
+	setJsAvailability("html");
+
 });

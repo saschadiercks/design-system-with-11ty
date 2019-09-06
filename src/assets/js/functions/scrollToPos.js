@@ -5,8 +5,10 @@
 // ####################
 
 // ###### script ######
-export default function addClass(elements, className) {
-	elements.forEach(function(element){
-		element.classList.add(className);
+export default function scrollToPos(x,y) {
+	window.scroll({
+		top: y,
+		left: x,
+		behavior: 'smooth'
 	});
 }

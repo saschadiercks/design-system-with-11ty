@@ -5,8 +5,8 @@
 // ####################
 
 // ###### script ######
-export default function addClass(elements, className) {
+export default function toggleClass(elements, className) {
 	elements.forEach(function(element){
-		element.classList.add(className);
+		element.classList.toggle(className);
 	});
 }

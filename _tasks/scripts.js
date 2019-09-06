@@ -1,28 +1,20 @@
 /* #### Setting #### */
 const config = require('./_config.json')
 const gulp = require('gulp')
-const uglify = require('gulp-uglify')
-const webpack = require('webpack')
-const webpackStream = require('webpack-stream')
-
-const webpackConfig = {
-	entry: {
-		site: [
-			`./${config.assetSrc}/js/site.js`,
-			`./${config.assetSrc}/3rdparty/prism/prism.js`
-		]
-	},
-	output: {
-		filename: '[name].js'
-	}
-}
+const webpack = require('webpack-stream')
+const terser = require('gulp-terser')
+const gulpif = require('gulp-if')
 
 /* ################# */
 /* ##### Tasks ##### */
 /* ################# */
 gulp.task('scripts:build', function () {
-	return gulp.src(config.assetSrc + '/js/site.js')
-	.pipe(webpackStream(webpackConfig))
-	.pipe(uglify())
-	.pipe(gulp.dest(config.assetDist + '/js'));
+	return gulp.src(config.assetSrc + '/js/')
+	.pipe(webpack(
+		require('../webpack.config.js')
+	))
+	.pipe(gulpif(process.env.NODE_ENV === config.envProduction ,
+		terser()
+	))
+	.pipe(gulp.dest('.'));
 });
