@@ -3,6 +3,7 @@
 // ###### Settings #####
 $nav-main-link-padding: $gutter--50 !default;
 $nav-main-link-padding--m-up: $gutter !default;
+$nav-main-justify: space-evenly !default;
 
 // we're using a manual breakpoints here
 // because we need more control, because of different contents
@@ -15,7 +16,8 @@ $nav-main-breakpoint--m: $sdi-m !default;
 .#{$prefix}navigation__list {
 	@include ul-reset;
 	display: flex;
-	justify-content: space-around;
+	justify-content: $nav-main-justify;
+	width: 100%;
 }
 
 .#{$prefix}nav-main__link {
