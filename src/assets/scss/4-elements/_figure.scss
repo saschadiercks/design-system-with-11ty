@@ -1,4 +1,12 @@
+// ###### Switchess #####
+
+// ###### Settings #####
+$figcaption-font-size: $h4-font-size !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 figcaption {
-	font-size: $h5-font-size;
-	font-stretch: italic;
+	font-size: $figcaption-font-size;
+	font-style: italic;
 }

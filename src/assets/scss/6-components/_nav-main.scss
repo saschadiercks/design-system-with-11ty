@@ -1,0 +1,31 @@
+// ###### switches #####
+
+// ###### Settings #####
+$nav-main-link-padding: $gutter--50 !default;
+$nav-main-link-padding--m-up: $gutter !default;
+
+// we're using a manual breakpoints here
+// because we need more control, because of different contents
+// and allow overriding these values via theme-settings
+$nav-main-breakpoint--m: $sdi-m !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}navigation__list {
+	@include ul-reset;
+	display: flex;
+	justify-content: space-around;
+}
+
+.#{$prefix}nav-main__link {
+	display: block;
+	padding: $nav-main-link-padding;
+	white-space: nowrap;
+}
+
+@media (min-width: $nav-main-breakpoint--m) {
+	.#{$prefix}nav-main__link {
+		padding: $nav-main-link-padding--m-up;
+	}
+}

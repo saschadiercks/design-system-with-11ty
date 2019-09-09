@@ -1,0 +1,37 @@
+// ###### switches #####
+$enable-padding: true !default;
+$enable-padding--vertical: true !default;
+$enable-padding--0: true !default;
+$enable-padding--50: true !default;
+
+// ###### Settings #####
+$padding-gutter: $gutter !default;
+$padding-gutter--50: $gutter--50 !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+@if $enable-padding--vertical {
+	.#{$prefix}padding--vertical {
+		padding-bottom: $padding-gutter;
+		padding-top: $padding-gutter;
+	}
+}
+
+@if $enable-padding {
+	.#{$prefix}padding {
+		padding: $padding-gutter;
+	}
+}
+
+@if $enable-padding--0 {
+	.#{$prefix}padding--0 {
+		padding: 0;
+	}
+}
+
+@if $enable-padding--50 {
+	.#{$prefix}padding--50 {
+		padding: $padding-gutter--50;
+	}
+}

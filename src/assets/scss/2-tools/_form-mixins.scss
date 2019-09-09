@@ -1,0 +1,32 @@
+// ###### Settings #####
+$input-bg: transparent !default;
+$input-border-color: $border-color !default;
+$input-color: $color-text !default;
+$input-font-size: inherit !default;
+$input-padding: $gutter--50 !default;
+$select-icon: "chevron-down.svg" !default;
+$select-padding-right: 24px !default;			// make place for icon
+$select-icon-size: .833em !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+@mixin select-icon {
+	background-image: url(#{$image-path--icons}#{$select-icon});
+	background-origin: border-box;
+	background-position: right $input-padding center;
+	background-repeat: no-repeat;
+	background-size: $select-icon-size;
+	padding-right: $select-padding-right;		// make place for icon
+}
+
+@mixin inputs {
+	background-color: $input-bg;
+	border: 1px solid $input-border-color;
+	border-radius: $radius;
+	color: $input-color;
+	font-family: inherit;
+	font-size: $input-font-size;
+	padding: $input-padding;
+	width: 100%;
+}

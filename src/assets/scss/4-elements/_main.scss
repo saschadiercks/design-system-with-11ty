@@ -1,1 +1,9 @@
-main { margin-bottom: $gutter; }
+// ###### Switchess #####
+
+// ###### Settings #####
+$main-gutter: $gutter !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+main { margin-bottom: $main-gutter; }

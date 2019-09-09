@@ -2,70 +2,21 @@
 $page-max-width: none !default;			// max-width for the whole page
 $content-max-width: 1200px !default;	// default width of website-content
 
-// Container-widths
-$container-max-width: $content-max-width !default;	// default width of website-content
-$container--narrow-max-width: 640px !default;		// Max-Width of narrow-content e.g. posts (smaller sizes improve reading on wider screens)
-$container--wide-max-width: none !default;			// Max width for content to stand out e.g. hero-teaser
-
-// these are your basic type-setting (applied to html)
+// these are your basic type-settings (applied to html)
 $font-family: sans-serif !default;	// we'll use this as our fallback-font
 $font-size: 1em !default;			// 1em = 16px
 $font-weight: normal !default;
 $line-height: 1.5rem !default;		// 1.5 * 16 = 24px
 
-// Whitespace
-$gutter: $line-height !default;
-$gutter--200: $gutter * 2 !default;
-$gutter--50: $gutter / 2 !default;
-$gutter--25: $gutter / 4 !default;
+// base radius
+$radius: 3px !default;
 
-$layout-gutter: $gutter--50 !default;
-$layout-gutter--m-up: $gutter !default;
-$link-gutter: $gutter--25 !default;
+// timings
+$base-animation-speed: .3s !default;
 
-// Border-Radius
-$radius: 4px !default;
-
-// Header
-$logo-width: 65px !default;
-$logo-height--s: 32px !default;
-$logo-width--s: 32px !default;
-$header-gutter: $gutter !default;
-
-// Pseudo-Footer
-$pseudo-footer-height: $gutter / 2 !default;
-
-// Buttons
-$button-font-size: 1rem !default;
-$button-font-size--75: .75rem !default;
-$button-font-weight: 600 !default;
-$button-font-weight--75: normal !default;
-$button-padding: $gutter--50 $gutter !default;
-$button-padding--75: $button-padding !default;
-$button-radius: $radius !default;
-
-// Avatar
-$avatar-border-radius: .5rem !default;
-$avatar-max-width: 130px !default;
-
-// Icons
-$icon-fill: currentColor !default;
-$icon-max-width: 32px !default;
-
-// Card
-$card-radius: $radius !default;
-$card-padding: $gutter--50 !default;
-
-// Code
-$code-background-color: #efeae7 !default;
-$code-radius: $radius !default;
-$code-color: currentColor !default;
-$code-font-size: .75rem !default;
-$code-font-family: "Fira Code", courier, "Courier New", monospace !default;
-
-// Media
-$media-gutter: $gutter / 2 !default;
-
-// Scroll top
-$scroll-top-radius: $radius !default;
-$scroll-top-min-size: 2rem !default;
+@import "basic/variables";
+@import "basic/breakpoints";
+@import "basic/colors";
+@import "basic/fonts";
+@import "basic/page";
+@import "basic/spacing";

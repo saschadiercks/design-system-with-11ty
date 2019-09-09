@@ -1,3 +1,0 @@
-@each $selector, $import-font in $import-fonts {
-	@import url($import-font);
-}

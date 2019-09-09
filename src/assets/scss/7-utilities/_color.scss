@@ -1,0 +1,24 @@
+// ###### switches #####
+$enable-color-primary: true !default;
+$enable-color-secondary: true !default;
+$enable-color-tertiary: true !default;
+
+// ###### Settings #####
+$color-text--primary: $color-primary !default;
+$color-text--secondary: $color-secondary !default;
+$color-text--tertiary: $color-tertiary !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+@if $enable-color-primary {
+	.#{$prefix}color-primary { color: $color-text--primary; }
+}
+
+@if $enable-color-secondary {
+	.#{$prefix}color-secondary { color: $color-text--secondary; }
+}
+
+@if $enable-color-tertiary {
+	.#{$prefix}color-tertiary { color: $color-text--tertiary; }
+}

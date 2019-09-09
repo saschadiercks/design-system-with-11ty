@@ -1,3 +1,12 @@
+// ###### switches #####
+
+// ###### Settings #####
+$avatar-border-radius: $radius !default;
+$avatar-max-width: 130px !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .#{$prefix}avatar {
 	border-radius: $avatar-border-radius;
 	max-width: $avatar-max-width;

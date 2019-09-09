@@ -1,0 +1,57 @@
+// define main colors
+$white: #fff !default;
+
+$color-brand: #007acc !default;
+$color-text: #333 !default;
+$color-text--dimmed: #dedede !default;
+$color-text--negative: $white !default;
+
+$color-primary: $color-brand !default;
+$color-primary--variant: #006bb3 !default;
+$color-tertiary: $color-text !default;
+$color-tertiary--light: $color-text--dimmed !default;
+
+// ---------------------------------
+// ---- assign colors for reuse ----
+// ---------------------------------
+
+// -- page-colors
+$body-bg: $white !default;
+$body-color: $color-text !default;
+$container-bg: transparent !default;
+
+// -- component bg
+$component-bg-light: #f6f6f6 !default;
+$component-bg--hover: $component-bg-light !default;
+$component-color-light: #555 !default;
+
+// -- backdrop-color
+$backdrop-color: $color-primary--variant !default;
+$backdrop-opacity: .8 !default;
+
+// --- text-colors
+$text-color: $color-text !default;
+$text-color--negative: $color-text--negative !default;
+$text-color--negative--dimmed: $color-text--dimmed !default;
+
+// -- border-color
+$border-color: #dedede !default;
+$border-color--light: #e4e4e4 !default;
+
+// -- Navigation mobile
+$nav-mobile-bg-base: #fff !default;
+$nav-mobile-color-base: $text-color !default;
+
+// -- Feedback & Validation
+$error-color: #e30613 !default;
+$error-bg: rgba($error-color, .1) !default;
+$success-color: #83b933 !default;
+$success-bg: rgba($success-color, .1) !default;
+$warning-color: #ff6f00 !default;
+$warning-bg: rgba($warning-color, .1) !default;
+$info-color: #4b72bc !default;
+$info-bg: rgba($info-color, .1) !default;
+
+// -- overlay colors for suggests, dropdowns
+$dropdown-overlay-bg: $white !default;
+$dropdown-overlay-color: $text-color !default;

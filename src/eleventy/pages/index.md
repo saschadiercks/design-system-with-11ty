@@ -13,7 +13,6 @@ date: 2019-01-01
 		<h1 class="sdi-hero__title">This is a design system documentation powered by <a href="https://github.com/11ty/eleventy">eleventy</a></h1>
 		<p class="sdi-hero__text">It is structured using <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">ITCSS</a> and uses <a href="http://getbem.com/">BEM</a> for the styling.</p>
 		<a class="sdi-button" href="https://github.com/saschadiercks/design-system-with-11ty">View on github</a>
-		<a class="sdi-button sdi-button--secondary" href="https://saschadiercks.de">View it in action</a>
 	</div>
 </div>
 
@@ -22,7 +21,7 @@ date: 2019-01-01
 <div class="sdi-row sdi-margin-bottom--200">
 	<div class="sdi-col sdi-col--25">
 		<div class="sdi-card">
-			<h2 class="h3 sdi-card__header">
+			<h2 class="sdi-h3 sdi-card__header sdi-center">
 				Elements
 			</h2>
 			<p class="sdi-card__main">
@@ -35,7 +34,7 @@ date: 2019-01-01
 	</div>
 	<div class="sdi-col sdi-col--25">
 		<div class="sdi-card">
-			<h2 class="h3 sdi-card__header">
+			<h2 class="sdi-h3 sdi-card__header sdi-center">
 				Objects
 			</h2>
 			<p class="sdi-card__main">
@@ -48,7 +47,7 @@ date: 2019-01-01
 	</div>
 	<div class="sdi-col sdi-col--25">
 		<div class="sdi-card">
-			<h2 class="h3 sdi-card__header">
+			<h2 class="sdi-h3 sdi-card__header sdi-center">
 				Components
 			</h2>
 			<p class="sdi-card__main">
@@ -61,7 +60,7 @@ date: 2019-01-01
 	</div>
 	<div class="sdi-col sdi-col--25">
 		<div class="sdi-card">
-			<h2 class="h3 sdi-card__header">
+			<h2 class="sdi-h3 sdi-card__header sdi-center">
 				Utilities
 			</h2>
 			<p class="sdi-card__main">

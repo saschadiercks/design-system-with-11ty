@@ -1,29 +1,89 @@
+// ###### switches #####
+$enable-card--lit: true !default;
+$enable-card--primary: true !default;
+$enable-card--borderless: true !default;
+
+// ###### Settings #####
+$card-bg: transparent !default;
+$card-border-color: $border-color !default;
+$card-bg--lit: $component-bg-light !default;
+$card-color--lit: $component-color-light !default;
+$card-bg--primary: $color-primary !default;
+$card-color--primary: $color-text--negative !default;
+$card-justify-content: space-between !default;
+
+$card-padding: $grid-gutter !default;
+$card-border-radius: 3px !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .#{$prefix}card {
-	border: 1px solid $border-color;
-	border-radius: $card-radius;
+	border: 1px solid $card-border-color;
+	border-radius: $card-border-radius;
+	color: currentColor;
 	display: flex;
 	flex-direction: column;
+	justify-content: $card-justify-content;	// stretch content, in case the card gets expanded. So several cards can be displayedd in conjunction
 	margin-bottom: $gutter;
-	padding: $card-padding;
-	text-align: center;
-}
+	position: relative;
+	text-decoration: none;
+	width: 100%;
 
-.#{$prefix}card__header {
-	align-self: top;
-}
-
-.#{$prefix}card__footer {
-	align-self: bottom;
+	&:hover { color: inherit; }
 }
 
 .#{$prefix}card__button {
 	display: block;
 }
 
-.#{$prefix}card--border-0 {
-	border-width: 0;
+.#{$prefix}card__header {
+	border-bottom: 1px solid $card-border-color;
+	padding: $card-padding;
 }
 
-.#{$prefix}card--lit {
-	background-color: $card-lit-bg;
+.#{$prefix}card__image {
+	img { display: block; }
+}
+
+.#{$prefix}card__heading { margin-bottom: 0; }
+
+.#{$prefix}card__main {
+	font-size: inherit;
+	margin-bottom: auto;		// push footer to bottom on cards in sameheight-container
+	padding: $card-padding;
+}
+
+.#{$prefix}card__footer {
+	padding: 0 $card-padding $card-padding $card-padding;
+}
+
+// -- card lit
+@if $enable-card--lit {
+	.#{$prefix}card.#{$prefix}card--lit {
+		background-color: $card-bg--lit;
+		color: $card-color--lit;
+	}
+}
+
+// -- card primary
+@if $enable-card--primary {
+	.#{$prefix}card.#{$prefix}card--primary {
+		background-color: $card-bg--primary;
+		color: $card-color--primary;
+	}
+}
+
+// -- a card without borders
+@if $enable-card--borderless {
+	.#{$prefix}card.#{$prefix}card--borderless { border-width: 0; }
+
+	.#{$prefix}card--borderless {
+		.#{$prefix}card__header { border-width: 0; }
+
+		.#{$prefix}card__main {
+			padding-left: $card-padding;
+			padding-right: $card-padding;
+		}
+	}
 }

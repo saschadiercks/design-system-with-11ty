@@ -1,0 +1,32 @@
+// ###### Switchess #####
+
+// ###### Settings #####
+$table-border-color: $border-color !default;
+$table-foot-bg-color: $component-bg-light !default;
+$table-head-bg-color: $component-bg-light !default;
+$table-zebra-color: $component-bg-light !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+table {
+	border: 1px solid $table-border-color;
+	border-bottom-width: 0;					// to avoid dublicate borders on mobile
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: $gutter;
+	width: 100%;
+}
+
+thead { background-color: $table-head-bg-color; }
+tfoot { background-color: $table-foot-bg-color; }
+
+tr { border-bottom: 1px solid $table-border-color; }
+
+td,
+th { padding: $gutter--50; }
+
+@include m-up {
+	th + th,
+	td + td { border-left: 1px solid $table-border-color; }
+}

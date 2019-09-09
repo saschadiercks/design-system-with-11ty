@@ -1,0 +1,5 @@
+$gutter: $line-height !default;			// line-height => 1.5rem/24px
+$gutter--25: $gutter / 4 !default;
+$gutter--33: $gutter / 3 !default;
+$gutter--50: $gutter / 2 !default;
+$gutter--75: $gutter * .75 !default;

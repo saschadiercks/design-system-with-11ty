@@ -1,9 +1,5 @@
 // Settings
-@import "1-settings/colors";
 @import "1-settings/settings";
-@import "1-settings/breakpoints";
-@import "1-settings/typography";
-@import "1-settings/variables";
 
 // Tools
 @import "2-tools/align-centered";
@@ -11,49 +7,47 @@
 @import "2-tools/clearfix";
 @import "2-tools/full-width";
 @import "2-tools/media-queries";
-@import "2-tools/import";
-@import "2-tools/text-alignment";
 @import "2-tools/ul-reset";
 
 // Generic
 @import "3-generic/box-sizing";
 @import "3-generic/font-smoothing";
 @import "3-generic/page";
-@import "3-generic/pseudo-footer";
 @import "3-generic/reset";
 @import "3-generic/reset-vertical";
 @import "3-generic/sticky-footer";
 
 // Elements
+@import "4-elements/button";
 @import "4-elements/code";
 @import "4-elements/figure";
+@import "4-elements/footer";
+@import "4-elements/header";
 @import "4-elements/headings";
 @import "4-elements/hr";
 @import "4-elements/links";
-@import "4-elements/lists";
 @import "4-elements/main";
+@import "4-elements/navigation";
 @import "4-elements/section";
 
 // Objects
 @import "5-objects/container";
 @import "5-objects/grid";
 @import "5-objects/media";
-@import "5-objects/ui-list";
+@import "5-objects/ui-lists";
 @import "5-objects/wrapper";
 
 // Components
 @import "6-components/avatar";
 @import "6-components/buttons";
 @import "6-components/card";
-@import "6-components/connect";
-@import "6-components/footer";
 @import "6-components/header";
 @import "6-components/hero";
 @import "6-components/icons";
 @import "6-components/logo";
-@import "6-components/navigation";
-@import "6-components/post";
-@import "6-components/promo";
+@import "6-components/nav-main";
+@import "6-components/nav-mobile";
+@import "6-components/navigation-vertical";
 @import "6-components/scroll-top";
 
 // utilities
@@ -62,6 +56,7 @@
 @import "7-utilities/hidden";
 @import "7-utilities/margin";
 @import "7-utilities/sticky";
+@import "7-utilities/text-alignment";
 
 // SHAME - Place dirty fixes here
 @import "shame";

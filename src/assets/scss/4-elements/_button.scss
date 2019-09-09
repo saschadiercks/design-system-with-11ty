@@ -1,0 +1,17 @@
+// ###### Switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+// Butttons can be used outside of forms, so we reset them separately
+// to make a button visible add a button-class in html like 'sdi-button'
+button {
+	background-color: transparent;
+	border-width: 0;
+	color: inherit;
+	cursor: pointer;
+	font-size: inherit;
+	outline: 0;
+}

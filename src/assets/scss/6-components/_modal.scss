@@ -1,0 +1,65 @@
+// ###### switches #####
+
+// ###### Settings #####
+$modal-max-height: 480px !default;
+$modal-max-width: 480px !default;
+
+$modal-background-color: #fff !default;
+$modal-color: $text-color !default;
+$modal-header-border: 2px solid $color-brand !default;
+$modal-header-padding: $gutter !default;
+$modal-button-padding: $modal-header-padding !default;
+$modal-content-padding: $modal-header-padding !default;
+$modal-footer-padding: $modal-header-padding !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.js .#{$prefix}modal { display: none; }
+
+.#{$prefix}modal.#{$is-active} {
+	display: block;
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: 99;
+}
+
+.#{$prefix}modal__overlay {
+	@include align-centered($position:fixed);
+	background-color: $modal-background-color;
+	color: $modal-color;
+	display: flex;
+	flex-direction: column;
+	max-height: $modal-max-height;
+	max-width: $modal-max-width;
+	width: 90%;		// we're using values < 100, so have a gap to the viewport on smaller screens
+}
+
+.#{$prefix}modal__header {
+	@if ($modal-header-border != none) {
+		border-bottom: $modal-header-border;
+	}
+	font-weight: 600;
+	padding: $modal-header-padding;
+	position: relative;
+}
+
+.#{$prefix}modal__content {
+	overflow-y: auto;
+	padding: $modal-content-padding;
+}
+
+.#{$prefix}modal__footer {
+	padding: $modal-footer-padding;
+}
+
+.#{$prefix}modal__close {
+	@include align-vertical;
+	background-color: transparent;
+	border-width: 0;
+	cursor: pointer;
+	font-size: inherit;
+	padding: $modal-button-padding;
+	right: 0;
+}

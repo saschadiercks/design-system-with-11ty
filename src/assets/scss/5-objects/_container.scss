@@ -1,38 +1,63 @@
-.#{$prefix}#{$container} {
+// ###### switches #####
+$enable-container--narrow: true !default;
+
+// ###### Settings #####
+$container-max-width: $content-max-width !default;	// default width of website-content
+$container--narrow-max-width: 640px !default;		// Max-Width of narrow-content e.g. posts (smaller sizes improve reading on wider screens)
+$container-gutter: $page-gutter !default;
+$container-gutter--m: $page-gutter--m !default;
+$container-gutter--l: $page-gutter--l !default;
+$container-position: initial !default;				// made configureable just in case we need to place content
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$container} {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: $layout-gutter;
-	padding-right: $layout-gutter;
+	padding-left: $container-gutter;
+	padding-right: $container-gutter;
+
+	@if $container-position != initial {
+		position: $container-position;
+	}
 }
 
-@if $container-max-width != "none" {
-	.#{$prefix}#{$container} {
+@if $container-max-width != none {
+	.#{$container} {
 		max-width: $container-max-width;
 		width: 100%;
 	}
 }
 
-// Variations
-@if $container--narrow-max-width != "none" {
-	.#{$prefix}#{$container}.#{$prefix}#{$container}--narrow { max-width: $container--narrow-max-width; }
-}
-
-@if $container--wide-max-width != "none" {
-	.#{$prefix}#{$container}.#{$prefix}#{$container}--wide { max-width: $container--wide-max-width; }
-}
-
-// more gutter above mobile
-@include m-up {
-	.#{$prefix}#{$container} {
-		padding-left: $layout-gutter--m-up;
-		padding-right: $layout-gutter--m-up;
+@if $container-bg != transparent {
+	.#{$prefix}container {
+		background-color: $container-bg;
 	}
 }
 
-// Remove space in viewport on higher resolutions
-@include xl {
-	.#{$prefix}#{$container} {
-		padding-left: 0;
-		padding-right: 0;
+// -- Variations
+@if $container--narrow-max-width != none and $enable-container--narrow {
+	.#{$container}.#{$container}--narrow { max-width: $container--narrow-max-width; }
+}
+
+@include m-up {
+	.#{$container} {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@include m {
+	.#{$container} {
+		padding-left: $container-gutter--m;
+		padding-right: $container-gutter--m;
+	}
+}
+
+@include l-up {
+	.#{$container} {
+		padding-left: $container-gutter--l;
+		padding-right: $container-gutter--l;
 	}
 }

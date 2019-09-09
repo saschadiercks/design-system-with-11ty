@@ -1,0 +1,25 @@
+// ###### switches #####
+$enable-background-color-primary: true !default;
+$enable-background-color-secondary: true !default;
+$enable-background-color-tertiary: true !default;
+$enable-background-color-tertiary-light: true !default;
+
+// ###### Settings #####
+$background-color--primary: $color-primary !default;
+$background-color--secondary: $color-secondary !default;
+$background-color--tertiary: $component-bg-light !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+@if $enable-background-color-primary {
+	.#{$prefix}background-color-primary { background-color: $background-color--primary; }
+}
+
+@if $enable-background-color-secondary {
+	.#{$prefix}background-color-secondary { background-color: $background-color--secondary; }
+}
+
+@if $enable-background-color-tertiary {
+	.#{$prefix}background-color-tertiary { background-color: $background-color--tertiary; }
+}

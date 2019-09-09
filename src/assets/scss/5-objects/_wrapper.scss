@@ -1,3 +1,10 @@
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
 @if $page-max-width != "none" {
 	.#{$prefix}#{$wrapper} {
 		margin-left: auto;

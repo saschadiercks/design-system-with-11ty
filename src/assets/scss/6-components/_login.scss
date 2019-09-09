@@ -1,0 +1,16 @@
+// ###### switches #####
+
+// ###### Settings #####
+$login-max-width: 480px !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}login {
+	max-width: $login-max-width;
+	width: 100%;
+}
+
+.#{$prefix}login--centered {
+	@include align-centered;
+}

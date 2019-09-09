@@ -1,17 +1,80 @@
+// ###### switches #####
+$enable-header-border-bottom: true !default;
+$enable-sticky-header: true !default;
+
+// ###### Settings #####
+$header-bg: $body-bg !default;
+$header-color: inherit !default;
+$header-border-bottom-color: $border-color--light !default;
+$header-margin-bottom: $gutter !default;
+$header-z-index: 3 !default;
+
+$header-logo-max-width: 55px !default;
+$header-logo-max-width--m-up: $sidebar-max-width !default;
+$header-logo-padding: 5px !default;
+$header-logo-padding--m-up: $gutter / 4 !default;
+$header-logo-width: $sidebar-max-width !default;
+
+$header-content-alignment: flex-end !default;		// Vertical alignment
+$header-content-justification: flex-end !default;	// Horizontal alignment
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .#{$prefix}header {
-	background-color: $header-bg;
-	border-bottom: 1px solid $separator-color;
-	margin-bottom: $header-gutter;
-	width: 100%;
+	color: $header-color;
+	margin-bottom: $header-margin-bottom;
+
+	@if $header-bg != transparent {
+		background-color: $header-bg;
+	}
+
+	@if $enable-header-border-bottom {
+		border-bottom: 1px solid $header-border-bottom-color;
+	}
+}
+
+.#{$prefix}header__main {
+	display: flex;
+}
+
+.#{$prefix}header__item {
+	display: flex;			// lets make all items the same height
+	flex: 1;
 }
 
 .#{$prefix}header__content {
-	align-items: center;
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: space-between;
+	align-items: $header-content-alignment;
+	justify-content: $header-content-justification;
+}
+
+// in case the header is sticky/fixed
+@if $enable-sticky-header {
+	.#{$prefix}header.#{$prefix}is-fixed {
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: $header-z-index;
+	}
+}
+
+@include s {
+	.#{$prefix}header {
+		z-index: 3;
+	}
+
+	.#{$prefix}header__logo {
+		max-width: $header-logo-max-width;
+		padding-bottom: $header-logo-padding;
+		padding-top: $header-logo-padding;
+		text-align: center;
+	}
 }
 
 @include m-up {
-	.#{$prefix}header__content { flex-direction: row; }
+	.#{$prefix}header__logo {
+		max-width: $header-logo-max-width--m-up;
+		padding-bottom: $header-logo-padding--m-up;
+		padding-top: $header-logo-padding--m-up;
+	}
 }

@@ -8,7 +8,7 @@
 		"color-no-invalid-hex": true,
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
-		"function-calc-no-invalid": true,
+		"function-calc-no-invalid": null,
 		"function-calc-no-unspaced-operator": true,
 		"function-linear-gradient-no-nonstandard-direction": true,
 		"string-no-newline": true,
@@ -25,7 +25,7 @@
 		"selector-type-no-unknown": true,
 		"media-feature-name-no-unknown": true,
 		"at-rule-no-unknown": [ true,
-			{ "ignoreAtRules": ["mixin", "each", "include", "if", "extend"] }
+			{ "ignoreAtRules": ["mixin", "each", "include", "if", "extend", "else"] }
 		],
 		"comment-no-empty": true,
 		"no-descending-specificity": true,
@@ -68,7 +68,7 @@
 		"selector-attribute-operator-blacklist": null,
 		"selector-attribute-operator-whitelist": null,
 		"selector-class-pattern": null,
-		"selector-combinator-blacklist": [">"],
+		"selector-combinator-blacklist": ["*"],
 		"selector-combinator-whitelist": null,
 		"selector-id-pattern": null,
 		"selector-max-attribute": 1,
@@ -150,7 +150,9 @@
 		"declaration-block-semicolon-space-before": "never",
 		"declaration-block-trailing-semicolon": "always",
 		"block-closing-brace-empty-line-before": "never",
-		"block-closing-brace-newline-after": "always",
+		"block-closing-brace-newline-after": [ "always", {
+			"ignoreAtRules" : ["if", "else"]
+		}],
 		"block-closing-brace-newline-before": "always-multi-line",
 		"block-closing-brace-space-after": null,
 		"block-closing-brace-space-before": "always-single-line",
@@ -193,7 +195,10 @@
 				"blockless-after-same-name-blockless",
 				"first-nested"
 			],
-			"ignore": ["after-comment"]
+			"ignore": [
+				"after-comment",
+				"inside-block"
+			]
 		}],
 		"at-rule-name-case": "lower",
 		"at-rule-name-newline-after": null,

@@ -1,27 +1,54 @@
+// ###### switches #####
+$enable-hidden-js: true !default;
+$enable-hidden-visually: true !default;
+$enable-hidden: true !default;
+$enable-hidden-s: true !default;
+$enable-hidden-m-up: true !default;
+
+// ###### Settings #####
 %hidden-default {
-	display: none;
+	display: none !important;
 	z-index: -1;
 }
+
+//---------------------
+// ###### Layout ######
+//---------------------
 // ---- js-hidden (Elements to be hidden via JS) ----
-.#{$prefix}js-hidden { @extend %hidden-default; }
+@if $enable-hidden-js {
+	.#{$prefix}js-hidden { @extend %hidden-default; }
+}
 
 // ---- Elemts to be visually hidden ----
 // https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 // https://a11yproject.com/posts/how-to-hide-content/
-.#{$prefix}v-hidden {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
-	overflow: hidden;
-	position: absolute !important;
-	width: 1px;
+@if $enable-hidden-visually {
+	.#{$prefix}v-hidden {
+		clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+		clip: rect(1px, 1px, 1px, 1px);
+		height: 1px;
+		overflow: hidden;
+		position: absolute !important;
+		width: 1px;
+	}
 }
 
 // ---- Hidden depending on viewport
 // Always
-.#{$prefix}hidden { @extend %hidden-default; }
+@if $enable-hidden {
+	.#{$prefix}hidden { @extend %hidden-default; }
+}
+
+// only hidden on mobile
+@if $enable-hidden-s {
+	@include s {
+		.#{$prefix}hidden--s { display: none; }
+	}
+}
 
 // only visible on mobile
-@include m-up {
-	.#{$prefix}hidden--m-up { display: none; }
+@if $enable-hidden-m-up {
+	@include m-up {
+		.#{$prefix}hidden--m-up { display: none; }
+	}
 }

@@ -1,0 +1,28 @@
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}align-right {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.#{$prefix}align-left {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.#{$prefix}align-center {
+	display: flex;
+	justify-content: center;
+}
+
+@include s {
+	.#{$prefix}align-center--s {
+		display: flex;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,36 @@
+// ###### switches #####
+$enable-wrap-s: true !default;
+$enable-reverse: true !default;
+$enable-align-vertical: true !default;
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+// -- wrap on mobile
+@if $enable-wrap-s {
+	@include s {
+		.#{$prefix}wrap--s {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}
+
+// -- reverse on higher resolutions
+@if $enable-reverse {
+	@include m-up {
+		.#{$prefix}reverse {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+		}
+	}
+}
+
+// -- align content vertical
+@if $enable-align-vertical {
+	.#{$prefix}align-vertical {
+		align-items: center;
+	}
+}

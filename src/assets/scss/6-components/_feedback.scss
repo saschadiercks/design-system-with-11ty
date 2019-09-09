@@ -1,0 +1,64 @@
+// ###### switches #####
+$enable-feedback--error: true !default;
+$enable-feedback--info: true !default;
+$enable-feedback--success: true !default;
+$enable-feedback--warning: true !default;
+
+// ###### Settings #####
+$feedback-margin-bottom: $gutter !default;
+$feedback-padding: $gutter !default;
+
+$feedback-error-bg: $error-bg !default;
+$feedback-error-border-color: $error-color !default;
+$feedback-error-color: $error-color !default;
+
+$feedback-success-bg: $success-bg !default;
+$feedback-success-border-color: $success-color !default;
+$feedback-success-color: $success-color !default;
+
+$feedback-warning-bg: $warning-bg !default;
+$feedback-warning-border-color: $warning-color !default;
+$feedback-warning-color: $warning-color !default;
+
+$feedback-info-bg: $info-bg !default;
+$feedback-info-border-color: $info-color !default;
+$feedback-info-color: $info-color !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}feedback {
+	border: 1px solid transparent;
+	margin-bottom: $feedback-margin-bottom;
+	padding: $feedback-padding;
+}
+
+.#{$prefix}feedback a { color: currentColor; }
+
+@if $enable-feedback--error {
+	.#{$prefix}feedback.#{$prefix}feedback--error {
+		background-color: $feedback-error-bg;
+		color: $feedback-error-color;
+	}
+}
+
+@if $enable-feedback--info {
+	.#{$prefix}feedback.#{$prefix}feedback--info {
+		background-color: $feedback-info-bg;
+		color: $feedback-info-color;
+	}
+}
+
+@if $enable-feedback--success {
+	.#{$prefix}feedback.#{$prefix}feedback--success {
+		background-color: $feedback-success-bg;
+		color: $feedback-success-color;
+	}
+}
+
+@if $enable-feedback--warning {
+	.#{$prefix}feedback.#{$prefix}feedback--warning {
+		background-color: $feedback-warning-bg;
+		color: $feedback-warning-color;
+	}
+}

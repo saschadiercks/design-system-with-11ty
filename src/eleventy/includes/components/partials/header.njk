@@ -1,6 +1,8 @@
 <header class="sdi-header sdi-header--{{ layout }}">
-	<div class="sdi-header__content sdi-container">
-		<a href="/" title="zur Statseite" class="sdi-logo">{% include 'components/partials/logo.njk' %}</a>
-		{% include 'components/partials/navigation.njk' %}
+	<div class="sdi-header__main sdi-container">
+		<a href="/" title="zur Statseite" class="sdi-logo sdi-header__item">{% include 'components/partials/logo.njk' %}</a>
+		<div class="sdi-header__main">
+			{% include 'components/partials/navigation.njk' %}
+		</div>
 	</div>
 </header>

@@ -1,0 +1,17 @@
+// ###### switches #####
+
+// ###### Settings #####
+$navigation-padding: $gutter--33 !default;
+$navigation-border-color: $border-color--light !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}navigation--vertical {
+	a {
+		display: block;
+		padding-bottom: $navigation-padding;
+		padding-top: $navigation-padding;
+	}
+	li { border-bottom: 1px solid $navigation-border-color; }
+}

@@ -1,0 +1,128 @@
+// ###### Switchess #####
+
+// ###### Settings #####
+$label-font-size: inherit !default;
+$input-horizontal-whitespace: $gutter--50 !default;
+$checkbox-radio-size: 22px !default;
+$checkbox-selected-icon: "check.svg" !default;
+$checkbox-selected-icon-size: 10px !default;
+$radio-selected-icon: "circle.svg" !default;
+$radio-selected-icon-size: 10px !default;
+$label-padding-bottom: 4px !default;
+$input-label-padding-top: 2px !default; // labels after checkboxes or radios
+$label-color:        currentColor !default;
+$legend-color:       currentColor !default;
+$placeholder-color:  $color-text--dimmed !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+fieldset {
+	border-width: 0;
+	padding: 0;
+}
+
+label {
+	color: $label-color;
+	display: inline-block;
+	font-size: $label-font-size;
+	font-weight: 600;
+	margin-right: $input-horizontal-whitespace;			// add white-space, if content is aligned horizontally
+	padding-bottom: $label-padding-bottom;
+	position: relative;									// let us add this to allow placement of content
+	vertical-align: top;
+}
+
+input,
+select,
+textarea {
+	@include inputs;
+	display: block;
+}
+
+select {
+	@include select-icon;
+	appearance: none;
+	vertical-align: bottom;						// we're aligning selects to bottom, in case they're next to other elements
+}
+
+textarea {
+	height: auto;
+
+	&::placeholder {
+		color: $placeholder-color;
+		font-size: $h4-font-size;
+	}
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border: 1px solid $color-text--dimmed;
+	outline: none;
+}
+
+input + label {
+	display: inline-block;
+	max-width: calc(100% - #{$checkbox-radio-size} * 2);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	appearance: none;
+	background: $input-bg none center center no-repeat;
+	color: $color-secondary;
+	display: inline-block;
+	height: $checkbox-radio-size;
+	line-height: 1;
+	margin-left: 0;
+	margin-top: 0;
+	position: relative;
+	vertical-align: top;
+	width: $checkbox-radio-size;
+}
+
+input[type="radio"] { border-radius: 99em; }
+
+// add whitespace, if multiple checkboxes or radios are displayed as siblings
+label + input[type="checkbox"],
+label + input[type="radio"] { margin-left: $input-horizontal-whitespace; }
+
+// preload images
+input[type="checkbox"]::before {
+	background-image: url(#{$image-path--icons}#{$checkbox-selected-icon});
+	content: "";
+}
+
+input[type="radio"]::before {
+	background-image: url(#{$image-path--icons}#{$radio-selected-icon});
+	content: "";
+}
+
+// checked elements
+input[type="checkbox"]:checked {
+	background-image: url(#{$image-path--icons}#{$checkbox-selected-icon});
+	background-size: $checkbox-selected-icon-size;
+}
+
+input[type="radio"]:checked {
+	background-image: url(#{$image-path--icons}#{$radio-selected-icon});
+	background-size: $radio-selected-icon-size;
+}
+
+// Remove cancel-buttons from search
+input[type="search"] { appearance: none; }
+
+// clears the 'X' from Internet Explorer
+input[type="search"]::-ms-clear,
+input[type="search"]::-ms-reveal {
+	display: none;
+	height: 0;
+	width: 0;
+}
+
+// clears the 'X' from Chrome
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }

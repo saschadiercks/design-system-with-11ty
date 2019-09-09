@@ -1,0 +1,64 @@
+// ###### Switchess #####
+$enable-footer-effect: true !default;
+
+// ###### Settings #####
+$footer-bg: $color-primary !default;
+$footer-color: $color-text--negative !default;
+$footer-color--hover: currentColor !default;
+$footer-font-size: $h4-font-size !default;
+$footer-line-height: inherit !default;
+$footer-margin-top: 0 !default;
+$footer-padding-top: 0 !default;
+$footer-padding-bottom: $gutter !default;
+
+$footer-effect-bg: $color-brand !default;
+$footer-effect-height: .75rem !default;		/* -- 12px / 16px -- */
+
+//---------------------
+// ###### Layout ######
+//---------------------
+footer {
+	background-color: $footer-bg;
+	color: $footer-color;
+	font-size: $footer-font-size;
+
+	@if $footer-line-height != inherit {
+		line-height: $footer-line-height;
+	}
+
+	@if $footer-margin-top != 0 {
+		margin-top: $footer-margin-top;
+	}
+
+	@if $footer-padding-bottom != 0 {
+		padding-bottom: $footer-padding-bottom;
+	}
+
+	@if $footer-padding-top != 0 {
+		padding-top: $footer-padding-top;
+	}
+}
+
+footer a {
+	color: currentColor;
+	text-decoration: none;
+
+	&:hover {
+		color: $footer-color--hover;
+		text-decoration: underline;
+	}
+}
+
+@if $enable-footer-effect {
+	body::after {
+		border-top: $footer-effect-height solid $footer-effect-bg;
+		bottom: 0;
+		content: "";
+		display: block;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		will-change: transform;
+		z-index: 1;
+	}
+}

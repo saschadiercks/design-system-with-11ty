@@ -1,0 +1,22 @@
+// ###### switches #####
+$enable-rounded: true !default;
+$enable-circle: true !default;
+
+// ###### Settings #####
+$radius-rounded: $radius !default;
+$radius-circle: 99em !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}rounded {
+	border-radius: $radius-rounded;
+}
+
+.#{$prefix}circle {
+	border-radius: $radius-circle;
+}
+
+.#{$prefix}square {
+	border-radius: 0;
+}

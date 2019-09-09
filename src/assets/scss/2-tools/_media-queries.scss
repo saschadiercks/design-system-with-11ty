@@ -12,6 +12,10 @@
 }
 
 @mixin l {
+	@media (min-width: $sdi-l) and (max-width: $sdi-xl - 1px) { @content; }
+}
+
+@mixin l-up {
 	@media (min-width: $sdi-l) { @content; }
 }
 

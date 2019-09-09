@@ -1,0 +1,19 @@
+// We are using classnames here so we can adapt some styles to  an already
+// existing framework. Just by overwriting the values
+
+// Change the prefix of classname here
+$prefix: "sdi-" !default;
+
+// Global
+$wrapper: "#{$prefix}wrapper" !default;				// wraps the whole page
+$container: "#{$prefix}container" !default;			// wraps conten of page (inside of header, main footer...)
+$image-path: "../images/" !default;
+$image-path--icons: "../images/icons/" !default;
+
+// Grid
+$row: "#{$prefix}row" !default;
+$col: "#{$prefix}col" !default;
+
+// Active & inactive classnames
+$is-active: "#{$prefix}is-active" !default;
+$is-inactive: "#{$prefix}is-inactive" !default;

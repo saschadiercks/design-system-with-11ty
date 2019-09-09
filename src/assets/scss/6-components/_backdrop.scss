@@ -1,0 +1,22 @@
+// ###### switches #####
+
+// ###### Settings #####
+$page-backdrop-color: $backdrop-color !default;
+$page-backdrop-opacity: $backdrop-opacity !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}backdrop {
+	background-color: $page-backdrop-color;
+
+	@if ($page-backdrop-opacity != 0) {
+		background-color: rgba($page-backdrop-color, $page-backdrop-opacity);
+	}
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	transition: opacity 0s ease;
+	width: 100vw;
+	z-index: -1;
+}

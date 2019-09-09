@@ -1,0 +1,67 @@
+// ###### switches #####
+$enable-center: true !default;
+$enable-left: true !default;
+$enable-right: true !default;
+
+$enable-center--s: true !default;
+$enable-left--s: true !default;
+$enable-right--s: true !default;
+
+$enable-center--m-up: true !default;
+$enable-left--m-up: true !default;
+$enable-right--m-up: true !default;
+
+$enable-uppercase: true !default;
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+
+// -- all resoulutions
+@if $enable-center {
+	.#{$prefix}center { text-align: center; }
+}
+
+@if $enable-left {
+	.#{$prefix}left { text-align: left; }
+}
+
+@if $enable-right {
+	.#{$prefix}right { text-align: right; }
+}
+
+@if $enable-uppercase {
+	.#{$prefix}uppercase { text-transform: uppercase; }
+}
+
+// -- mobile only (s)
+@include s {
+	@if $enable-center--s {
+		.#{$prefix}center--s { text-align: center; }
+	}
+
+	@if $enable-left--s {
+		.#{$prefix}left--s { text-align: left; }
+	}
+
+	@if $enable-right--s {
+		.#{$prefix}right--s { text-align: right; }
+	}
+}
+
+// -- above mobile (s)
+@include m-up {
+	@if $enable-center--m-up {
+		.#{$prefix}center--m-up { text-align: center; }
+	}
+
+	@if $enable-left--m-up {
+		.#{$prefix}left--m-up { text-align: left; }
+	}
+
+	@if $enable-right--m-up {
+		.#{$prefix}right--m-up { text-align: right; }
+	}
+}

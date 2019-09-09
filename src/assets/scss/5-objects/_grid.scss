@@ -1,42 +1,121 @@
+// ###### switches #####
+$enable-row--0: true !default;
+$enable-col--25: true !default;
+$enable-col--33: true !default;
+$enable-col--66: true !default;
+$enable-col--50: true !default;
+$enable-col--75: true !default;
+$enable-col--100: true !default;
+
+$enable-row--no-grow: true !default;
+$enable-align-vertical: true !default;
+$enable-sameheight: true !default;
+
+// ###### Settings #####
+$grid-gutter: 12px !default;	// insert desired gutter. Margin and padding will be calculated: round($grid-gutter/2) ...;
+$grid-gutter--l: 24px !default;	// insert desired gutter. Margin and padding will be calculated: round($grid-gutter/2) ...;
+$grid-col-basis: auto !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .#{$row} {
 	align-content: flex-start;
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: $layout-gutter / -1;
-	margin-right: $layout-gutter / -1;
+	margin-left: $grid-gutter / -1;
+	margin-right: $grid-gutter / -1;
 }
 
 .#{$col} {
-	flex: none;
-	padding-left: $layout-gutter;
-	padding-right: $layout-gutter;
+	padding-left: $grid-gutter / 2;
+	padding-right: $grid-gutter / 2;
 	width: 100%;
 }
 
 @include m-up {
+	.#{$row} {
+		margin-left: $grid-gutter--l / -2;
+		margin-right: $grid-gutter--l / -2;
+	}
+
 	.#{$col} {
-		flex: 1 1 auto;
+		flex: 1 1 $grid-col-basis;
+		padding-left: $grid-gutter--l / 2;
+		padding-right: $grid-gutter--l / 2;
 		width: auto;
 	}
 
-	// this itm is always 100% so this is listed for documentation only
-	.#{$col}.#{$col}--100 {
-		width: 100%;
+	// this item is always 100% so this is listed for documentation only
+	@if $enable-col--100 {
+		.#{$col}.#{$col}--100 {
+			width: 100%;
+		}
 	}
 
-	.#{$col}.#{$col}--75 {
-		width: 75%;
+	@if $enable-col--75 {
+		.#{$col}.#{$col}--75 {
+			width: 75%;
+		}
 	}
 
-	.#{$col}.#{$col}--50 {
-		width: 50%;
+	@if $enable-col--66 {
+		.#{$col}.#{$col}--66 {
+			width: 66%;
+		}
 	}
 
-	.#{$col}.#{$col}--33 {
-		width: 33.333%;
+	@if $enable-col--50 {
+		.#{$col}.#{$col}--50 {
+			width: 50%;
+		}
 	}
 
-	.#{$col}.#{$col}--25 {
-		width: 25%;
+	@if $enable-col--33 {
+		.#{$col}.#{$col}--33 {
+			width: 33.333%;
+		}
+	}
+
+	@if $enable-col--25 {
+		.#{$col}.#{$col}--25 {
+			width: 25%;
+		}
+	}
+}
+
+// -- prevent growing of columns
+@if $enable-row--no-grow {
+	.#{$row}.#{$row}--no-grow {
+		.#{$col} { flex-grow: 0; }
+	}
+}
+
+// -- grid without gutter
+@if $enable-row--0 {
+	.#{$row} .#{$row}--0 {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.#{$row}--0 {
+		.#{$col} {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+// -- align content vertical
+@if $enable-align-vertical {
+	.#{$row}--align-vertical {
+		align-items: center;
+	}
+}
+
+// -- stretch content in columns to 100% height / TODO: maybe an utility class
+@if $enable-sameheight {
+	.#{$prefix}sameheight > .#{$col} {
+		display: flex;
 	}
 }

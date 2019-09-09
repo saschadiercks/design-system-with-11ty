@@ -1,0 +1,43 @@
+// -----------------------
+// ---- font families ----
+// -----------------------
+$import-font-families: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" !default;
+
+// Body
+$body-font-family: "Open Sans", sans-serif !default;
+
+// Icons
+$icon-font: "Font Awesome 5 Pro", "Font Awesome 5 Free" !default;
+$icon-font-weight: 900 !default;
+$icon-brands-font: "Font Awesome 5 Brands" !default;
+$icon-brands-font-weight: 400 !default;
+
+// Code
+$mono-font-family: "Fira Code", courier, "Courier New", monospace !default;
+
+// ----------------------
+// ----- font sizes -----
+// ----------------------
+// Font-Sizes are calculated by using REM
+// you can define your bas-font-size
+// by setting different font-sizes you are able to scale your text depending on resolution
+// Rememeber, the dault font-size of html is 16px!
+// use px if you don"t want to automatically scale them
+$body-font-size: 1rem !default;		/* -- 16px / 16px -- */
+
+$h1-font-size: 1.875rem !default; 	/* -- 30px / 16px -- */
+$h1-line-height: 36px !default;
+
+$h2-font-size: 1.25rem !default; 	/* -- 20px / 16px -- */
+$h2-line-height: 27px !default;
+
+$h3-font-size: 1rem !default;		/* -- 16px / 16px -- */
+$h3-line-height: 24px !default;
+
+$h4-font-size: .875rem !default;	/* -- 14px / 16px -- */
+$h4-line-height: 18px !default;
+
+$p1-font-size: $h1-font-size !default;
+$p2-font-size: $h2-font-size !default;
+$p3-font-size: $h3-font-size !default;
+$p4-font-size: $h4-font-size !default;

@@ -1,40 +1,131 @@
+// ###### switches #####
+$enable-button-active: true !default;
+$enable-button--primary: true !default;
+$enable-button--secondary: true !default;
+$enable-button--75: true !default;
+
+// ###### Settings #####
+$button-bg: transparent !default;		// transparent to unset
+$button-border-color: $color-primary !default;
+$button-color: $color-primary !default;
+$button-font-weight: 600 !default;
+
+$button-hover-border-color: $color-primary--variant !default;
+$button-hover-bg: $color-primary--variant !default;
+$button-hover-color: $color-text--negative !default;
+$button-padding: $gutter--50 !default;
+$button-min-width: 0 !default;
+$button-radius: $radius !default;
+
+$button-bg--primary: $color-primary !default;
+$button-border-color--primary: $color-primary !default;
+$button-color--primary: $color-text--negative !default;
+$button-hover-bg--primary: $color-primary--variant !default;
+$button-hover-border-color--primary: $color-primary--variant !default;
+
+$button-bg--secondary: transparent !default;
+$button-border-color--secondary: $color-primary--variant !default;
+$button-color--secondary: $color-primary--variant !default;
+$button-hover-bg--secondary: $color-primary !default;
+$button-hover-border-color--secondary: $color-primary !default;
+$button-hover-color--secondary: $color-text--negative !default;
+
+$button-active-bg: $button-bg--primary !default;
+$button-active-border-color: $button-border-color--primary !default;
+$button-active-color: $button-color--primary !default;
+
+$button-font-size: inherit !default;
+$button-font-size--75: .875rem !default;	/* -- 14px / 16px -- */
+
+$button-paddig--75: $button-padding * .875 !default;
+
+$button-transition-speed: $base-animation-speed !default;
+
+$button-to-button-margin-top: 2px;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .#{$prefix}button {
-	background-color: $button-bg;
-	border: 2px solid $button-border-color;
+	@if $button-font-weight != normal {
+		font-weight: $button-font-weight;
+	}
+
+	@if $button-min-width != 0 {
+		min-width: $button-min-width;
+	}
+
+	@if $button-bg != transparent {
+		background-color: $button-bg;
+	}
+	border: 1px solid $button-border-color;
 	border-radius: $button-radius;
 	color: $button-color;
-	cursor: pointer;
 	display: inline-block;
-	font-family: inherit;
 	font-size: $button-font-size;
-	font-weight: $button-font-weight;
-	line-height: 1;
+	line-height: inherit;
 	padding: $button-padding;
+	text-align: center;
 	text-decoration: none;
-	transition: color, background-color .2s;
+	transition: background-color $button-transition-speed;
 
-	&:hover {
-		background-color: $button-hover-bg;
-		border-color: $button-hover-bg;
+	&:hover,
+	&:active {
+		@if $button-hover-bg != transparent {
+			background-color: $button-hover-bg;
+		}
+		border-color: $button-hover-border-color;
 		color: $button-hover-color;
 	}
 }
 
-.#{$prefix}button.#{$prefix}button--secondary {
-	background-color: $button-bg--secondary;
-	border-color: $button-border-color--secondary;
-	color: $button-color--secondary;
+@if $enable-button--primary {
+	.#{$prefix}button.#{$prefix}button--primary {
+		background-color: $button-bg--primary;
+		border-color: $button-border-color--primary;
+		color: $button-color--primary;
 
-	&:hover {
-		background-color: $button-hover-bg--secondary;
-		border-color: $button-hover-bg--secondary;
-		color: $button-hover-color--secondary;
+		&:hover {
+			background-color: $button-hover-bg--primary;
+			border-color: $button-hover-border-color--primary;
+		}
 	}
 }
 
-// Button Sizes
-.#{$prefix}button.#{$prefix}button--75 {
-	font-size: $button-font-size--75;
-	font-weight: $button-font-weight--75;
-	padding: $button-padding--75;
+@if $enable-button--secondary {
+	.#{$prefix}button.#{$prefix}button--secondary {
+		background-color: $button-bg--secondary;
+		border-color: $button-border-color--secondary;
+		color: $button-color--secondary;
+
+		&:hover {
+			background-color: $button-hover-bg--secondary;
+			border-color: $button-hover-bg--secondary;
+			color: $button-hover-color--secondary;
+		}
+	}
+}
+
+// -- Active states
+@if $enable-button-active {
+	.#{$prefix}button.#{$prefix}active {
+		background-color: $button-active-bg;
+		border-color: $button-active-border-color;
+		color: $button-active-color;
+		cursor: default;
+		pointer-events: none;
+	}
+}
+
+// -- Size Variations
+@if $enable-button--75 {
+	.#{$prefix}button.#{$prefix}button--75 {
+		font-size: $button-font-size--75;
+		padding: $button-paddig--75;
+	}
+}
+
+// -- several buttons
+.#{$prefix}button + .#{$prefix}button {
+	margin-top: $button-to-button-margin-top;
 }

@@ -1,8 +1,16 @@
-a {
-	background-color: transparent;
-	color: $link-color;
-	display: inline-block;
-}
+// ###### Switchess #####
 
-a:active,
-a:hover { color: $link-hover-color; }
+// ###### Settings #####
+$link-color: $color-primary !default;
+$link-color-hover: $color-primary--variant !default;
+$link-color-active: $color-primary--variant !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+a {
+	color: $link-color;
+
+	&:hover { color: $link-color-hover; }
+	&:active { color: $link-color-active; }
+}

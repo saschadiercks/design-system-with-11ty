@@ -1,0 +1,47 @@
+// ###### switches #####
+
+// ###### Settings #####
+$decorator-color: $color-secondary !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+%center-decorator {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.#{$prefix}decorator { margin-bottom: 0; }
+
+.#{$prefix}decorator::after {
+	background-color: $decorator-color;
+	content: "";
+	display: block;
+	height: 2px;
+	margin-bottom: 14px;
+	margin-top: 7px;
+	width: 24px;
+}
+
+.#{$prefix}decorator.#{$prefix}decorator--wide::after { width: 30px; }
+
+// -- Center decorator if parent is centered
+.#{$prefix}center .#{$prefix}decorator::after {
+	@extend %center-decorator;
+}
+
+// -- Center decorator if current element is centered
+.#{$prefix}center.#{$prefix}decorator::after {
+	@extend %center-decorator;
+}
+
+// -- center behavior on mobile
+@include s {
+	.#{$prefix}center--s .#{$prefix}decorator::after,
+	.#{$prefix}center--s.#{$prefix}decorator::after {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.#{$prefix}decorator--m-up::after { display: none; }
+}

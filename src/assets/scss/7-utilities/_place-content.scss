@@ -1,0 +1,40 @@
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}place { position: absolute; }
+
+.#{$prefix}place.#{$prefix}place--bottom-left {
+	bottom: 0;
+	left: 0;
+	margin-left: 0;
+}
+
+.#{$prefix}place.#{$prefix}place--bottom-right {
+	bottom: 0;
+	margin-right: 0;
+	right: 0;
+}
+
+.#{$prefix}place.#{$prefix}place--centered {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.#{$prefix}place.#{$prefix}place--center-right {
+	margin-right: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.#{$prefix}place.#{$prefix}place--center-left {
+	left: 0;
+	margin-left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}

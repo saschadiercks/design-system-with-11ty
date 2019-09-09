@@ -1,0 +1,128 @@
+// ###### Switches #####
+$enable-collapse-lit: true !default;
+$enable-collapse-with-border: true !default;
+$enable-collapse--s: true !default;
+
+// ###### Settings #####
+$collapse-bg: transparent !default;
+$collapse-color: inherit !default;
+$collapse-border-color: $input-border-color !default;
+$collapse-header-padding: $input-padding !default;
+$collapse-main-max-height: 80vh !default;		// used for animating the collapse
+$collapse-main-translate-y: -1px !default;		// 0 to unset
+$collapse-content-padding: $input-padding !default;
+$collapse-transition-speed: $base-animation-speed !default;
+$collapse-active-icon-rotation: -180deg !default;
+$collapse-lit-bg: $component-bg-light !default;
+$collapse-collapse-whitespace: 2px !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.js .#{$prefix}collapse__main {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height $collapse-transition-speed ease;
+}
+
+.#{$prefix}collapse__button {
+	display: flex;
+	justify-content: space-between;
+	padding: $collapse-header-padding;
+	text-align: left;
+	width: 100%;
+}
+
+.#{$prefix}collapse__icon {
+	transition: transform $collapse-transition-speed ease;
+}
+
+.#{$prefix}collapse__header {
+	background-color: $collapse-bg;
+	border-bottom: 1px solid $collapse-border-color;
+	color: $collapse-color;
+}
+
+.#{$prefix}collapse__main {
+	@if $collapse-main-translate-y != 0 {
+		transform: translateY($collapse-main-translate-y);
+	}
+}
+
+// -- This div avoids unwanted padding, when collapse is closed
+.#{$prefix}collapse__content {
+	padding: $collapse-content-padding;
+}
+
+// -- several collapses
+.#{$prefix}collapse + .#{$prefix}collapse {
+	margin-top: $collapse-collapse-whitespace;
+}
+
+// -- collapse is lit
+@if $enable-collapse-lit {
+	.#{$prefix}collapse--lit {
+		.#{$prefix}collapse__header {
+			background-color: $collapse-lit-bg;
+			border-radius: $radius;
+			border-width: 0;
+		}
+
+		.#{$prefix}collapse__content {
+			border: 1px solid $collapse-lit-bg;
+			border-radius: $radius;
+		}
+	}
+}
+
+// -- collapse has border
+@if $enable-collapse-with-border {
+	.#{$prefix}collapse--border {
+		.#{$prefix}collapse__header {
+			border: 1px solid $collapse-border-color;
+			border-radius: $radius;
+		}
+
+		.#{$prefix}collapse__content {
+			border: 1px solid $collapse-border-color;
+			border-radius: $radius;
+		}
+	}
+}
+
+// -- active state / animation
+.#{$prefix}collapse.#{$is-active} .#{$prefix}collapse__main {
+	max-height: $collapse-main-max-height;
+	overflow-y: auto;
+}
+
+.#{$prefix}collapse.#{$is-active} .#{$prefix}collapse__icon {
+	transform: rotate($collapse-active-icon-rotation);
+}
+
+//-- collapse on mobile only (good for footer)
+//-- resetting our default collapse here
+@include m-up {
+	.#{$prefix}collapse--s {
+		.#{$prefix}collapse__button {
+			padding: 0;
+			pointer-events: none;
+		}
+
+		.#{$prefix}collapse__header {
+			border-width: 0;
+		}
+
+		.#{$prefix}collapse__icon {
+			display: none;
+		}
+
+		.#{$prefix}collapse__main {
+			max-height: none;
+		}
+
+		.#{$prefix}collapse__content {
+			padding: 0;
+		}
+	}
+}

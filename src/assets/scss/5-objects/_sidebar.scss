@@ -1,0 +1,16 @@
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}sidebar {
+	margin-bottom: $gutter;
+}
+
+@include m-up {
+	.#{$prefix}sidebar {
+		max-width: $sidebar-max-width + ($grid-gutter / 2);
+	}
+}

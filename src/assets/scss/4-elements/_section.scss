@@ -1,1 +1,11 @@
-section { margin-bottom: $gutter; }
+// ###### Switchess #####
+
+// ###### Settings #####
+$section-gutter: $gutter * 3 !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+section {
+	margin-bottom: $section-gutter;
+}

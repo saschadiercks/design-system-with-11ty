@@ -1,0 +1,29 @@
+// ###### switches #####
+$enable-placeholder-negative: true !default;
+$enable-select-negative: true !default;
+
+// ###### Settings #####
+$input-border-color--negative: $body-bg !default;
+$input-color--negative: $color-text--negative !default;
+$select-icon--negative: "chevron-down--white.svg" !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}negative {
+	border-color: $input-border-color--negative !important;
+	color: $input-color--negative !important;
+}
+
+// Placeholder
+@if $enable-placeholder-negative {
+	.#{$prefix}negative::placeholder { color: $input-color--negative !important; }
+}
+
+// Select
+@if $enable-select-negative {
+	select.#{$prefix}negative {
+		background-image: url(#{$image-path}#{$select-icon--negative});
+		background-position: right center;
+	}
+}

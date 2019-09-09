@@ -1,27 +1,57 @@
-html {
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+// ###### switches #####
+$enable-reset-html: true !default;
+$enable-reset-figure: true !default;
+$enable-reset-iframe: true !default;
+$enable-reset-img: true !default;
+$enable-reset-video: true !default;
+$enable-reset-html5: true !default;
+
+// ###### Settings #####
+$html-height: 100% !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+
+@if $enable-reset-html {
+	html {
+		font-size: 100%;
+		height: $html-height;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	}
 }
 
-// Figure
-figure {
-	margin-left: 0;
-	margin-right: 0;
+@if $enable-reset-figure {
+	figure {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
-img {
-	border-style: none;
-	height: auto;
-	max-width: 100%;
-	width: 100%;
+@if $enable-reset-iframe {
+	iframe { border-width: 0; }
 }
 
-svg {
-	height: 100%;
-	width: 100%;
+@if $enable-reset-img {
+	img {
+		height: auto;
+		max-width: 100%;
+	}
 }
-// Remove the default vertical scrollbar in IE 10+.
-textarea { overflow: auto; }
+
+@if $enable-reset-video {
+	video {
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+// -- HTMLshiv 5 fixes
+@if $enable-reset-html5 {
+	header,
+	main,
+	footer { display: block; }
+}

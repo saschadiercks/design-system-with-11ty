@@ -1,3 +1,15 @@
+// ###### Switchess #####
+
+// ###### Settings #####
+$code-background-color: #efeae7 !default;
+$code-radius: $radius !default;
+$code-color: currentColor !default;
+$code-font-size: .75rem !default;
+$code-font-family: $mono-font-family !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 code {
 	background-color: $code-background-color;
 	border-radius: $code-radius;

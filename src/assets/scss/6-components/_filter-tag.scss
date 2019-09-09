@@ -1,0 +1,36 @@
+// ###### switches #####
+
+// ###### Settings #####
+$filter-tag-alginment: baseline; // use 'baseline' when using font-awesome otherwise use 'center'
+$filter-tag-bg: $component-bg-light;
+$filter-tag-color: currentColor;
+$filter-tag-border-radius: $radius;
+$filter-tag-margin: $gutter--50;
+$filter-tag-padding: $gutter--50;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}filter-tag {
+	align-items: $filter-tag-alginment;
+	background-color: $filter-tag-bg;
+	border-radius: $filter-tag-border-radius;
+	color: $filter-tag-color;
+	cursor: pointer;
+	display: flex;
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: $filter-tag-margin;
+	margin-right: $filter-tag-margin;
+	padding: $filter-tag-padding;
+	text-decoration: none;
+	white-space: nowrap;
+
+	&:hover {
+		color: inherit;
+	}
+}
+
+.#{$prefix}filter-tag__icon {
+	font-style: normal;
+}

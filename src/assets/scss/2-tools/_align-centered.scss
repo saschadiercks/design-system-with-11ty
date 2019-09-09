@@ -1,6 +1,6 @@
-@mixin align-centered() {
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
+@mixin align-centered($position:absolute, $left:50%, $top:50%) {
+	left: #{$left};
+	position: #{$position};
+	top: #{$top};
+	transform: translate(#{$left * -1}, #{$top * -1});
 }

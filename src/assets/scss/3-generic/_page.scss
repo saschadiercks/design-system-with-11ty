@@ -1,18 +1,23 @@
-html {
-	font-family: $font-family;
-	font-size: $font-size;
-	font-weight: $font-weight;
-	line-height: $line-height;
-	overflow-x: hidden;		// avoid vertical scrollbars
-}
+// ###### Settings #####
+$body-hyphens: none !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+@import url($import-font-families);
 
 body {
-	background-color: $bg;
-	color: $color;
-	font-display: swap;
-	font-family: $font-family-body, $font-family;
+	background-color: $body-bg;
+	color: $body-color;
+	font-family: $body-font-family;
+	font-size: $body-font-size;
 	height: 100%;
-	hyphens: $hyphens;
-	margin: 0;
-	padding: 0;
+	line-height: $line-height;
+	margin: $body-margin;
+	padding: $body-padding;
+	width: 100%;			// this allows fixing the body to prevent scrolling when opening modals
+
+	@if $body-hyphens != none {
+		hyphens: $body-hyphens;
+	}
 }

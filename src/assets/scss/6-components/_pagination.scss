@@ -1,0 +1,18 @@
+// ###### switches #####
+
+// ###### Settings #####
+$pagination-link-min-width: 50px !default;
+$pagination-gutter: $gutter--33 !default;
+$pagination-dot-padding: $button-padding !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}pagination { margin-bottom: $gutter; }
+.#{$prefix}pagination__item + .#{$prefix}pagination__item { margin-left: $pagination-gutter; }
+.#{$prefix}pagination__link { min-width: $pagination-link-min-width; }
+
+.#{$prefix}pagination__dots {
+	display: inline-block;
+	padding-top: $pagination-dot-padding;
+}

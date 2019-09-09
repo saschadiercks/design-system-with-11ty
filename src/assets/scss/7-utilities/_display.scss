@@ -1,2 +1,25 @@
-.#{$prefix}inline-block { display: inline-block; }
-.#{$prefix}block { display: block; }
+// ###### switches #####
+$enable-display-block: true !default;
+$enable-display-flex: true !default;
+$enable-display-inline-block: true !default;
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+// use this to display an element as block
+@if $enable-display-block {
+	.#{$prefix}block { display: block; }
+}
+
+// use this to display an element as flex
+// reminder: the height of flex-elements stretches to it's parent
+@if $enable-display-flex {
+	.#{$prefix}flex { display: flex; }
+}
+
+// use this to display an element as inline-block
+@if $enable-display-inline-block {
+	.#{$prefix}inline-block { display: inline-block; }
+}

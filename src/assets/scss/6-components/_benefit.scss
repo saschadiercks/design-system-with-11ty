@@ -1,0 +1,17 @@
+// ###### switches #####
+
+// ###### Settings #####
+$benefit-icon-size: $h1-font-size !default;
+$benefit-gutter: $gutter--50 !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}benefit__icon {
+	font-size: $benefit-icon-size;
+	margin-bottom: $benefit-gutter;
+}
+
+.#{$prefix}benefit__heading {
+	margin-bottom: $benefit-gutter;
+}

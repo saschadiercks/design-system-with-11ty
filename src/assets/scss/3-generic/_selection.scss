@@ -1,0 +1,14 @@
+// ###### switches #####
+
+// ###### Settings #####
+$selection-bg: $color-brand !default;
+$selection-color: #fff !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+
+::selection {
+	background-color: $selection-bg;
+	color: $selection-color;
+}

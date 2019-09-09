@@ -1,21 +1,40 @@
+// ###### switches #####
+
+// ###### Settings #####
+$scroll-top-bg: $color-primary !default;
+$scroll-top-color: #fff !default;
+$scroll-top-border: 2px solid $body-bg !default;
+$scroll-top-hover-bg: $color-primary--variant !default;
+$scroll-top-hover-color: #fff !default;
+$scroll-top-min-size: 3rem !default;
+$scroll-top-icon-size: $scroll-top-min-size / 2 !default;
+$scroll-top-radius: 99em !default;
+$scroll-top-pos-bottom: $gutter !default;
+$scroll-top-pos-right: $gutter !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .#{$prefix}scroll-top {
 	align-items: center;
 	background-color: $scroll-top-bg;
+	border: $scroll-top-border;
 	border-radius: $scroll-top-radius;
-	bottom: $gutter;
+	bottom: $scroll-top-pos-bottom;
 	color: $scroll-top-color;
 	display: flex;
 	height: $scroll-top-min-size;
 	position: fixed;
-	right: $gutter--50;
+	right: $scroll-top-pos-right;
 	text-align: center;
 	text-decoration: none;
 	width: $scroll-top-min-size;
-	z-index: 1;
+	z-index: 9;
 }
 
 .#{$prefix}scroll-top__icon {
 	flex: 1;
+	font-size: $scroll-top-icon-size;
 }
 
 .#{$prefix}scroll-top:hover {

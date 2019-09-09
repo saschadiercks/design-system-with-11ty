@@ -1,0 +1,42 @@
+// ###### switches #####
+$enable-box--lit: true !default;
+$enable-box--primary: true !default;
+
+// ###### Settings #####
+$box-padding: $grid-gutter !default;
+$box-border-radius: 0 !default;
+
+$box-bg--primary: $color-primary !default;
+$box-color--primary: $color-text--negative !default;
+
+$box-bg--lit: $component-bg-light !default;
+$box-color--lit: $component-color-light !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}box {
+	display: flex;
+	padding: $box-padding;
+	width: 100%;
+
+	@if $box-border-radius != 0 {
+		border-radius: $box-border-radius;
+	}
+}
+
+// -- box lit
+@if $enable-box--lit {
+	.#{$prefix}box.#{$prefix}box--lit {
+		background-color: $box-bg--lit;
+		color: $box-color--lit;
+	}
+}
+
+// -- box primary
+@if $enable-box--primary {
+	.#{$prefix}box.#{$prefix}box--primary {
+		background-color: $box-bg--primary;
+		color: $box-color--primary;
+	}
+}

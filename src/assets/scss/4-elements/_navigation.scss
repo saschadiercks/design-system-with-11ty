@@ -1,0 +1,24 @@
+// ###### Switchess #####
+
+// ###### Settings #####
+$navigation-link-color: currentColor !default;
+$navigation-link-color-hover: $color-primary--variant !default;
+$navigation-link-color-active: $color-primary--variant !default;
+
+$navigation-transition-speed: $base-animation-speed !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+nav {
+	text-transform: uppercase;
+
+	a {
+		color: $navigation-link-color;
+		text-decoration: none;
+		transition: color $navigation-transition-speed ease;
+	}
+	a:hover { color: $navigation-link-color-hover; }
+
+	.#{$prefix}active { color: $navigation-link-color-active; }
+}

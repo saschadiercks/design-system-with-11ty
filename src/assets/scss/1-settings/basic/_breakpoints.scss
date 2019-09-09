@@ -1,0 +1,13 @@
+// Set your breakpoints here
+$sdi-m:  768px !default;	// min-width
+$sdi-l: 1200px !default;	// min-width
+$sdi-xl: $page-max-width !default;
+
+// automatic setting of "sdi-s" depending on "sdi-m"
+$sdi-s: $sdi-m - 1px !default;
+
+// -- Breakpoint to show mobile navigation
+// we're using a manual breakpoints here
+// because we need more control, because of different contents
+// and allow overriding these values via theme-settings
+$nav-mobile-breakpoint--s: $sdi-s !default;

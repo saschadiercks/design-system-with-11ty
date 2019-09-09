@@ -1,0 +1,19 @@
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}ui-list {
+	@include ul-reset;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.#{$prefix}ui-list.#{$prefix}ui-list--vertical {
+	flex-direction: column;
+}
+
+.#{$prefix}ui-list__link { text-decoration: none; }

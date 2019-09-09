@@ -36,6 +36,8 @@ pre { font-size: .75rem !important; }
 	padding: 2px;
 }
 
+.#{$prefix}time { font-size: .75rem; }
+
 @keyframes highlight {
 	0% {
 		box-shadow: 0;
@@ -51,5 +53,5 @@ pre { font-size: .75rem !important; }
 :target {
 	animation-duration: .5s;
 	animation-name: highlight;
-	border-color: $brand-color;
+	border-color: $color-brand;
 }

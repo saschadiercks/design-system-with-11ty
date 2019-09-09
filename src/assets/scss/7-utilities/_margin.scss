@@ -1,9 +1,64 @@
-.#{$prefix}margin-bottom { margin-bottom: $gutter; }
+// ###### switches #####
+$enable-margin-bottom: true !default;
+$enable-margin-bottom--0: true !default;
+$enable-margin-bottom--25: true !default;
+$enable-margin-bottom--50: true !default;
+$enable-margin-bottom--200: true !default;
 
-.#{$prefix}margin-bottom--200 { margin-bottom: $gutter--200; }
+$enable-margin-top: true !default;
+$enable-margin-top--0: true !default;
+$enable-margin-top--25: true !default;
+$enable-margin-top--50: true !default;
+$enable-margin-top--200: true !default;
 
-.#{$prefix}margin-bottom--50 { margin-bottom: $gutter--50; }
+// ###### Settings #####
+$margin-gutter: $gutter !default;
+$margin-gutter--25: $gutter / 4 !default;
+$margin-gutter--50: $gutter / 2 !default;
+$margin-gutter--200: $gutter * 2 !default;
 
-.#{$prefix}margin-bottom--25 { margin-bottom: $gutter--25; }
+//---------------------
+// ###### Layout ######
+//---------------------
 
-.#{$prefix}margin-bottom--0 { margin-bottom: 0; }
+// -- margin-bottom
+@if $enable-margin-bottom {
+	.#{$prefix}margin-bottom { margin-bottom: $margin-gutter; }
+}
+
+@if $enable-margin-bottom--0 {
+	.#{$prefix}margin-bottom--0 { margin-bottom: 0; }
+}
+
+@if $enable-margin-bottom--25 {
+	.#{$prefix}margin-bottom--25 { margin-bottom: $margin-gutter--25; }
+}
+
+@if $enable-margin-bottom--50 {
+	.#{$prefix}margin-bottom--50 { margin-bottom: $margin-gutter--50; }
+}
+
+@if $enable-margin-bottom--200 {
+	.#{$prefix}margin-bottom--200 { margin-bottom: $margin-gutter--200; }
+}
+
+// -- margin-top
+@if $enable-margin-top {
+	.#{$prefix}margin-top { margin-top: $gutter; }
+}
+
+@if $enable-margin-top--0 {
+	.#{$prefix}margin-top--0 { margin-top: 0; }
+}
+
+@if $enable-margin-top--25 {
+	.#{$prefix}margin-top--25 { margin-top: $margin-gutter--25; }
+}
+
+@if $enable-margin-top--50 {
+	.#{$prefix}margin-top--50 { margin-top: $margin-gutter--50; }
+}
+
+@if $enable-margin-top--200 {
+	.#{$prefix}margin-top--200 { margin-top: $margin-gutter--200; }
+}

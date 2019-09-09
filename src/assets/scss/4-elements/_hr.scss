@@ -1,5 +1,16 @@
+// ###### Switchess #####
+
+// ###### Settings #####
+$hr-color: $border-color !default;
+$hr-margin-bottom: $gutter !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 hr {
-	border-bottom: 0;
-	border-top: 1px solid $separator-color;
-	margin-bottom: $gutter;
+	border-top: 1px solid $hr-color;
+	border-width: 1px 0 0;
+	height: 0;
+	margin-bottom: $hr-margin-bottom;
+	margin-top: 0;
 }

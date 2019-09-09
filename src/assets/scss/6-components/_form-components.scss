@@ -1,0 +1,60 @@
+// ###### switches #####
+
+// ###### Settings #####
+$form-info-color: currentColor !default;
+$form-info-font-size: .813rem !default;		/* -- 13px / 16px -- */
+$form-info-required-style: italic !default;
+
+$input-required-color: $error-color !default;
+$input-required-icon: "*" !default;
+$input-required-whitespace: 3px !default;
+$input-required-whitespace--checkbox: 4px !default;
+$gutter-form-row: $gutter !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}form__row { margin-bottom: $gutter-form-row; }
+
+.#{$prefix}form__info {
+	color: $form-info-color;
+	font-size: $form-info-font-size;
+}
+
+.#{$prefix}form__info--required {
+	font-style: $form-info-required-style;
+}
+
+// -- style required fields (we're using absolute positioning to keep label-text aligned, whether required or not)
+.#{$prefix}required {
+	label::after {
+		color: $input-required-color;
+		content: $input-required-icon;
+		margin-left: $input-required-whitespace;
+	}
+}
+
+// -- style icon, when used separetely
+.#{$prefix}required-icon::after {
+	color: $input-required-color;
+	content: $input-required-icon;
+}
+
+// Checkboxes get the required icon not on the label,
+// but on the checkbox itself so we add some padding
+// to chaeckboxes and radios to use the same whitespace
+input ~ label {
+	padding-left: $input-required-whitespace--checkbox;		// add whitespace, so we can place an required icon there
+}
+
+.#{$prefix}required input[type="checkbox"] ~ label::after {
+	content: "";											// remove the icon on the label
+}
+
+.#{$prefix}required input[type="checkbox"]::after {
+	color: $input-required-color;
+	content: $input-required-icon;
+	position: absolute;
+	right: $input-required-whitespace--checkbox * -3;
+	top: -2px;
+}

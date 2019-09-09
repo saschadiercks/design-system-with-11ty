@@ -1,10 +1,54 @@
-h1, .h1 { font-size: $h1-font-size; }
-h2, .h2 { font-size: $h2-font-size; }
-h3, .h3 { font-size: $h3-font-size; }
-h4, .h4 { font-size: $h4-font-size; }
-h5, .h5 { font-size: $h5-font-size; }
-h6, .h6 { font-size: $h6-font-size; }
+// ###### switches #####
+$enable-h1:	true !default;
+$enable-h2:	true !default;
+$enable-h3:	true !default;
+$enable-h4:	true !default;
 
-@if $font-family-headings != "inherit" {
-	h1, h2, h3, h4, h5, h6 { font-family: $font-family-headings; }
+// ###### Settings #####
+$heading-color: currentColor !default;
+$heading-font-weight: 800 !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+%headings-reset {
+	color: $heading-color;
+	font-weight: $heading-font-weight;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+@if $enable-h1 {
+	h1, .#{$prefix}h1 {
+		@extend %headings-reset;
+		font-size: $h1-font-size;
+		line-height: $h1-line-height;
+		margin-bottom: $gutter;
+	}
+}
+
+@if $enable-h2 {
+	h2, .#{$prefix}h2 {
+		@extend %headings-reset;
+		font-size: $h2-font-size;
+		line-height: $h2-line-height;
+	}
+}
+
+@if $enable-h3 {
+	h3, .#{$prefix}h3 {
+		@extend %headings-reset;
+		font-size: $h3-font-size;
+		line-height: $h3-line-height;
+		margin-bottom: $gutter--50;
+	}
+}
+
+@if $enable-h4 {
+	h4, .#{$prefix}h4 {
+		@extend %headings-reset;
+		font-size: $h4-font-size;
+		line-height: $h4-line-height;
+		margin-bottom: $gutter--33;
+	}
 }

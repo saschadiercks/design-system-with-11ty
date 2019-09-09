@@ -1,0 +1,37 @@
+// ###### switches #####
+$enable-table-hover: true !default;
+$enable-table-responsive: true !default;
+$enable-table-zebra: true !default;
+
+// ###### Settings #####
+$table-bg-hover: $component-bg--hover !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+// -- hover effect on table-rows
+@if $enable-table-hover {
+	.#{$prefix}table--hover tr:hover { background-color: $table-bg-hover; }
+}
+
+// -- collapse table on mobile to column-view
+@if $enable-table-responsive {
+	@include s {
+		.#{$prefix}table--responsive {
+			tr,
+			td,
+			th {
+				border-left-color: transparent;
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+
+// -- zebra effect
+@if $enable-table-zebra {
+	.#{$prefix}table--zebra {
+		tr:nth-child(even) { background-color: $table-zebra-color; }
+	}
+}

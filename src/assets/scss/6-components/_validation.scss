@@ -1,0 +1,58 @@
+// ###### switches #####
+
+// ###### Settings #####
+$validation-font-size: 12px !default;
+$validation-gutter: $gutter--25 !default;
+
+$validation-error-bg: $error-bg !default;
+$validation-error-border-color: $error-color !default;
+$validation-error-color: $error-color !default;
+
+$validation-success-bg: $success-bg !default;
+$validation-success-border-color: $success-color !default;
+$validation-success-color: $success-color !default;
+
+$validation-warning-bg: $warning-bg !default;
+$validation-warning-border-color: $warning-color !default;
+$validation-warning-color: $warning-color !default;
+
+$validation-info-bg: $info-bg !default;
+$validation-info-border-color: $info-color !default;
+$validation-info-color: $info-color !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+// -- decrease whitespace on checkboxes / radio
+label + .#{$prefix}validation { margin-top: $validation-gutter * -2; }
+
+// -- style form-elements
+.#{$prefix}validation--empty input,
+.#{$prefix}validation--empty select,
+.#{$prefix}validation--requirements input,
+.#{$prefix}validation--requirements select {
+	background-color: $validation-error-bg;
+	border-color: $validation-error-color;
+}
+
+// -- in case validation contains link
+.#{$prefix}validation a { color: inherit; }
+
+// -- style messages
+.#{$prefix}validation__text--empty { color: $validation-error-color; }
+.#{$prefix}validation__text--requirements { color: $validation-error-color; }
+.#{$prefix}validation__text--success { color: $validation-success-color; }
+
+// #### Toogle Validation
+// -- Form Validation
+.#{$prefix}validation__text {
+	display: none;	 // initially hide
+	font-size: $validation-font-size;
+	margin-bottom: 0;
+	margin-top: $validation-gutter;
+}
+
+//-- show messages on validation
+.#{$prefix}validation--empty .#{$prefix}validation__text--empty,
+.#{$prefix}validation--requirements .#{$prefix}validation__text--requirements,
+.#{$prefix}validation--success .#{$prefix}validation__text--success { display: block; }

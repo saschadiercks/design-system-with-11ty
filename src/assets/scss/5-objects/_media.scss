@@ -1,3 +1,11 @@
+// ###### switches #####
+
+// ###### Settings #####
+$media-gutter: $gutter--50 !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .#{$prefix}media {
 	display: flex;
 	flex: 1;
@@ -7,18 +15,11 @@
 	margin-right: $media-gutter / -2;
 }
 
-.#{$prefix}media--center-vertical {
-	align-items: center;
-}
-
 .#{$prefix}media__content,
 .#{$prefix}media__object {
 	padding: $media-gutter;
 }
 
-@include m-up {
-	.#{$prefix}media.#{$prefix}media--reversed {
-		flex-direction: row-reverse;
-		justify-content: flex-end;
-	}
+.#{$prefix}media--center-vertical {
+	align-items: center;
 }

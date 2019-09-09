@@ -1,58 +1,97 @@
+// ###### switches #####
+$enable-hero-content-box: true !default;
+
+// ###### Settings #####
+$hero-gutter: $gutter !default;
+$hero-text-align: center !default;
+$hero-content-max-width: 600px !default;
+
+$hero-background-color: transparent !default;
+$hero-background-size: auto !default;
+$hero-color: currentColor !default;
+$hero-link-color: currentColor !default;
+$hero-content-box-background-color: $backdrop-color !default;
+$hero-content-box-color: $color-text--negative !default;
+$hero-content-box-background-opacity: $backdrop-opacity !default;
+$hero-content-box-padding: $gutter !default;
+$hero-content-box-radius: $radius !default;
+
+$hero-border-color: $border-color !default;
+$hero-margin-bottom: $gutter !default;
+
+$hero-padding-top: $hero-gutter !default;
+$hero-padding-bottom: $hero-gutter * 2 !default;	// to compensate header-margin
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .#{$prefix}hero {
-	background-color: $hero-bg;
-	border-bottom: 1px solid $separator-color;
-	color: $hero-color;
 	display: flex;
 	flex-direction: column;
 	font-weight: bold;
 	justify-content: center;
-	line-height: 1;
-	margin-bottom: $gutter;
-	padding-bottom: $gutter * 2;	// to compensate header-margin
-	padding-top: $gutter;
+	margin-bottom: $hero-gutter;
+	text-align: $hero-text-align;
+
+	@if $hero-gutter != 0 {
+		padding-bottom: $hero-padding-bottom;
+		padding-top: $hero-padding-top;
+	}
+
+	@if $hero-border-color != transparent {
+		border-bottom: 1px solid $hero-border-color;
+	}
+
+	@if $hero-background-size != auto {
+		background-repeat: no-repeat;
+		background-size: $hero-background-size;
+	}
+
+	@if $hero-background-color != transparent {
+		background-color: $hero-background-color;
+	}
+
+	@if $hero-color != inherit and $hero-color != currentColor {
+		color: $hero-color;
+	}
 }
 
-.#{$prefix}hero__title {
-	font-size: $herotitle-font-size;
-	text-transform: uppercase;
+.#{$prefix}hero__link {
+	color: $hero-link-color;
 }
 
-.#{$prefix}hero__text {
-	line-height: 1.2;
-	text-transform: initial;
+.#{$prefix}hero__image {
+	width: 100%;
 }
 
-.#{$prefix}hero__subtitle {
-	margin-bottom: $gutter--50;
-	order: -1;
-}
-
-.#{$prefix}hero__content {
-	display: flex;
-	flex-direction: column;
-}
-
-.#{$prefix}hero--large {
-	text-transform: uppercase;
-
-	.#{$prefix}hero__title {
-		font-size: $herotitle-font-size--large;
+@if $enable-hero-content-box {
+	.#{$prefix}hero__content--box {
+		padding-bottom: $hero-content-box-padding;
+		padding-top: $hero-content-box-padding;
 	}
 }
 
 @include m-up {
-	.#{$prefix}hero--large {
-		height: 90vh;
-		max-height: 500px;
+	.#{$prefix}hero--has-image {
+		.#{$prefix}hero__container {
+			bottom: $gutter;
+			left: 0;
+			margin-left: 0;
+			position: absolute;
+		}
 
-		.#{$prefix}hero__title {
-			font-size: $herotitle-font-size--large--m-up;
+		.#{$prefix}hero__content {
+			max-width: $hero-content-max-width;
 		}
 	}
 
-	.#{$prefix}hero__title {
-		font-size: $herotitle-font-size--m-up;
+	@if $enable-hero-content-box {
+		.#{$prefix}hero__content--box {
+			background-color: rgba($hero-content-box-background-color, $hero-content-box-background-opacity);
+			border-radius: $hero-content-box-radius;
+			color: $hero-content-box-color;
+			padding-left: $hero-content-box-padding;
+			padding-right: $hero-content-box-padding;
+		}
 	}
 }
-
-// TODO: improve this

@@ -1,0 +1,94 @@
+// ###### switches #####
+$enable-hamburger-animation: true !default;
+$enable-hamburger-css-icon: true !default;
+
+// ###### Settings #####
+$hamburger-bg: $nav-mobile-bg-base !default;
+$hamburger-color: $nav-mobile-color-base !default;
+$hamburger-padding: 1rem 0 !default;
+$hamburger-position: relative !default;
+$hamburger-position-left: 0 !default;
+$hamburger-position-top: 0 !default;
+
+$hamburger-height: 16px !default;
+$hamburger-width: 24px !default;
+$hamburger-bar-size: 2px !default;
+$hamburger-bar-color: currentColor !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+.#{$prefix}hamburger {
+	background-color: $hamburger-bg;
+	color: $hamburger-color;
+	display: flex;
+	padding: $hamburger-padding;
+	position: $hamburger-position;
+	z-index: 3;					// make sure, the hamburger always lays above all content
+
+	@if $hamburger-position-top != 0 {
+		top: $hamburger-position-top;
+	}
+
+	@if $hamburger-position-left != 0 {
+		top: $hamburger-position-left;
+	}
+}
+
+// -- build the hamburger icon
+@if $enable-hamburger-css-icon {
+	.#{$prefix}hamburger__icon {
+		display: block;
+		height: $hamburger-height;
+		position: relative;
+		width: $hamburger-width;
+	}
+
+	.#{$prefix}hamburger__bar {
+		border-top: $hamburger-bar-size solid $hamburger-bar-color;
+		display: block;
+		left: 0;
+		position: absolute;
+		width: 100%;
+
+		// the bars (nth-child: 1,2,4) and the cross (nth-child: 2,3)
+		&:nth-child(1) {
+			top: 0;
+		}
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:nth-child(4) {
+			bottom: 0;
+		}
+	}
+}
+
+@if $enable-hamburger-animation {
+	.#{$prefix}hamburger__bar {
+		transition: $base-animation-speed all ease;
+	}
+
+	.#{$is-active} {
+		.#{$prefix}hamburger__bar {
+			// hide the bars
+			&:nth-child(1),
+			&:nth-child(4) {
+				opacity: 0;
+			}
+
+			// animate the cross
+			&:nth-child(2) {
+				transform: rotate(-45deg);
+			}
+
+			&:nth-child(3) {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
