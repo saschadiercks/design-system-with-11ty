@@ -5,7 +5,7 @@ import toggleClass from "./toggleClass.js";
 // ####################
 // ##### settings #####
 // ####################
-const class__isActive = 'js-is-active';
+const class__isActive = 'sdi-is-active';
 
 // ###### script ######
 export default function handleTriggers(selector, callback) {

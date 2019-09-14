@@ -2,13 +2,13 @@
 	<div class="sdi-nav-mobile__overlay">
 		<div class="sdi-nav-mobile__content">
 			<nav class="sdi-navigation">
-				<ul class="sdi-navigation__list sdi-ui-list sdi-margin-bottom--0">
+				<ul class="sdi-navigation__list sdi-nav-mobile__list sdi-margin-bottom--0">
 					{%- for nav in collections.nav -%}
 						<li class="sdi-navigation__list-item"><a href="{{ nav.url }}" class="sdi-navigation__link{% if page.url == nav.url %} active {% endif %}">{{ nav.data.navtitle }}</a></li>
 					{%- endfor -%}
 				</ul>
 			</nav>
 		</div>
-		<div class="sdi-backdrop sdi-js-nav-mobile-trigger" data-target="sdi-nav-mobile"></div>
 	</div>
+	<div class="sdi-backdrop sdi-js-nav-mobile-trigger" data-target="#sdi-nav-mobile"></div>
 </div>
