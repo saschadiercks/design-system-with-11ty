@@ -1,5 +1,6 @@
 // #### imports ####
 import setJsAvailability from "./components/setJsAvailability.js";
+import hamburgerState from "./components/hamburgerState.js";
 
 import handleTriggers from "./functions/handleTriggers.js";
 
@@ -16,6 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	setJsAvailability("html");
 
 	// -- handle triggers
-	handleTriggers('.sdi-flyout-trigger');
+	handleTriggers('.sdi-flyout-trigger', hamburgerState);
 
 });
