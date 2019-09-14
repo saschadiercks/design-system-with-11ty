@@ -1,8 +1,16 @@
 <header class="sdi-header sdi-header--{{ layout }}">
 	<div class="sdi-container">
 		<div class="sdi-header__main">
-			<div class="sdi-header__item sdi-js-nav-mobile-trigger" data-target="#sdi-nav-mobile">
-				<button class="sdi-nav-mobile-trigger">menu</button>
+			<div class="sdi-header__item sdi-hidden--m-up">
+				<button class="sdi-hamburger sdi-flyout-trigger" data-target="#sdi-nav-mobile">
+					<div class="sdi-hamburger__icon">
+						<span class="sdi-hamburger__bar"></span>
+						<span class="sdi-hamburger__bar"></span>
+						<span class="sdi-hamburger__bar"></span>
+						<span class="sdi-hamburger__bar"></span>
+					</div>
+					<span class="sdi-hamburger__text">menu</span>
+				</button>
 			</div>
 			<a href="/" title="zur Statseite" class="sdi-header__item sdi-header__logo">{% include 'components/partials/logo.njk' %}</a>
 			<div class="sdi-header__item sdi-header__content">

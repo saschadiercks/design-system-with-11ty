@@ -1,30 +1,38 @@
 // ###### switches #####
 $enable-hamburger-animation: true !default;
 $enable-hamburger-css-icon: true !default;
+$enable-hamburger-text: true !default;
 
 // ###### Settings #####
-$hamburger-bg: $nav-mobile-bg-base !default;
-$hamburger-color: $nav-mobile-color-base !default;
+$hamburger-bg: transparent !default;
+$hamburger-color: currentColor !default;
 $hamburger-padding: 1rem 0 !default;
 $hamburger-position: relative !default;
 $hamburger-position-left: 0 !default;
 $hamburger-position-top: 0 !default;
 
 $hamburger-height: 16px !default;
-$hamburger-width: 24px !default;
+$hamburger-width: 26px !default;
 $hamburger-bar-size: 2px !default;
 $hamburger-bar-color: currentColor !default;
+$hamburger-text-font-size: $icon-text-font-size !default;
+$hamburger-text-margin-top: 5px !default;
 
 //---------------------
 // ###### Layout ######
 //---------------------
 .#{$prefix}hamburger {
-	background-color: $hamburger-bg;
 	color: $hamburger-color;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	padding: $hamburger-padding;
 	position: $hamburger-position;
 	z-index: 3;					// make sure, the hamburger always lays above all content
+
+	@if ($hamburger-bg != transparent) {
+		background-color: $hamburger-bg;
+	}
 
 	@if $hamburger-position-top != 0 {
 		top: $hamburger-position-top;
@@ -89,6 +97,21 @@ $hamburger-bar-color: currentColor !default;
 			&:nth-child(3) {
 				transform: rotate(45deg);
 			}
+		}
+	}
+}
+
+@if $enable-hamburger-text {
+	.#{$prefix}hamburger__text {
+		font-size: $hamburger-text-font-size;
+		margin-top: $hamburger-text-margin-top;
+		opacity: 1;
+		transition: $base-animation-speed all ease;
+	}
+
+	.#{$is-active} {
+		.#{$prefix}hamburger__text {
+			opacity: 0;
 		}
 	}
 }

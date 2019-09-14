@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	setJsAvailability("html");
 
 	// -- handle triggers
-	handleTriggers('.sdi-js-nav-mobile-trigger');
+	handleTriggers('.sdi-flyout-trigger');
 
 });

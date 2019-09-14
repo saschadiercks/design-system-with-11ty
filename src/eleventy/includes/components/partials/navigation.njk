@@ -1,8 +1,8 @@
-<div class="sdi-nav-main" id="sdi-nav-mobile">
-	<div class="sdi-nav-mobile__overlay">
-		<div class="sdi-nav-mobile__content">
+<div class="sdi-nav-main sdi-flyout sdi-flyout--s" id="sdi-nav-mobile">
+	<div class="sdi-flyout__overlay">
+		<div class="sdi-flyout__content">
 			<nav class="sdi-navigation">
-				<ul class="sdi-navigation__list sdi-nav-mobile__list sdi-margin-bottom--0">
+				<ul class="sdi-navigation__list sdi-flyout__list sdi-margin-bottom--0">
 					{%- for nav in collections.nav -%}
 						<li class="sdi-navigation__list-item"><a href="{{ nav.url }}" class="sdi-navigation__link{% if page.url == nav.url %} active {% endif %}">{{ nav.data.navtitle }}</a></li>
 					{%- endfor -%}
@@ -10,5 +10,5 @@
 			</nav>
 		</div>
 	</div>
-	<div class="sdi-backdrop sdi-js-nav-mobile-trigger" data-target="#sdi-nav-mobile"></div>
+	<div class="sdi-backdrop sdi-flyout-trigger" data-target="#sdi-nav-mobile"></div>
 </div>
