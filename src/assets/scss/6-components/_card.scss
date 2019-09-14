@@ -39,6 +39,7 @@ $card-border-radius: 3px !default;
 
 .#{$prefix}card__header {
 	border-bottom: 1px solid $card-border-color;
+	margin-bottom: 0;
 	padding: $card-padding;
 }
 

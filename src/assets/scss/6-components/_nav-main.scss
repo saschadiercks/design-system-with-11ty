@@ -20,6 +20,10 @@ $nav-main-breakpoint--m: $sdi-m !default;
 	width: 100%;
 }
 
+.#{$prefix}nav-main {
+	width: 100%;
+}
+
 .#{$prefix}nav-main__link {
 	display: block;
 	padding: $nav-main-link-padding;

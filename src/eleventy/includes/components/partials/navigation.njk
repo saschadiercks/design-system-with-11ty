@@ -1,10 +1,14 @@
-<nav class="sdi-header__item sdi-header__content">
-	{# <input type="checkbox" id="sdi-navigation__trigger" class="sdi-hidden sdi-trigger"/>
-	<label for="sdi-navigation__trigger" class="h2 sdi-hidden--m-up sdi-trigger">☰</label> #}
-
-		<ul class="sdi-navigation__list sdi-ui-list sdi-margin-bottom--0">
-			{%- for nav in collections.nav -%}
-				<li class="sdi-navigation__item"><a href="{{ nav.url }}" class="sdi-navigation__link{% if page.url == nav.url %} active {% endif %}">{{ nav.data.navtitle }}</a></li>
-			{%- endfor -%}
-		</ul>
-</nav>
+<div class="sdi-nav-main" id="sdi-nav-mobile">
+	<div class="sdi-nav-mobile__overlay">
+		<div class="sdi-nav-mobile__content">
+			<nav class="sdi-navigation">
+				<ul class="sdi-navigation__list sdi-ui-list sdi-margin-bottom--0">
+					{%- for nav in collections.nav -%}
+						<li class="sdi-navigation__list-item"><a href="{{ nav.url }}" class="sdi-navigation__link{% if page.url == nav.url %} active {% endif %}">{{ nav.data.navtitle }}</a></li>
+					{%- endfor -%}
+				</ul>
+			</nav>
+		</div>
+		<div class="sdi-backdrop sdi-js-nav-mobile-trigger" data-target="sdi-nav-mobile"></div>
+	</div>
+</div>

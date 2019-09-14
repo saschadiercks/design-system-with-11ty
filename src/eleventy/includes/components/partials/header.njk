@@ -1,6 +1,14 @@
-<header class="sdi-header sdi-header__main sdi-header--{{ layout }}">
-	<div class="sdi-header__main sdi-container">
-		<a href="/" title="zur Statseite" class="sdi-header__item sdi-logo">{% include 'components/partials/logo.njk' %}</a>
-		{% include 'components/partials/navigation.njk' %}
+<header class="sdi-header sdi-header--{{ layout }}">
+	<div class="sdi-container">
+		<div class="sdi-header__main">
+			<div class="sdi-header__item sdi-nav-mobile-trigger">
+				<input type="checkbox" id="sdi-navigation__trigger" class="sdi-hidden--m-up"/>
+				<label for="sdi-navigation__trigger" class="h2 sdi-hidden--m-up sdi-trigger">☰</label>
+			</div>
+			<a href="/" title="zur Statseite" class="sdi-header__item sdi-header__logo">{% include 'components/partials/logo.njk' %}</a>
+			<div class="sdi-header__item sdi-header__content">
+				{% include 'components/partials/navigation.njk' %}
+			</div>
+		</div>
 	</div>
 </header>
