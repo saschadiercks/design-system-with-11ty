@@ -3,7 +3,7 @@ import setJsAvailability from "./components/setJsAvailability.js";
 import hamburgerState from "./components/hamburgerState.js";
 
 import handleTriggers from "./functions/handleTriggers.js";
-
+import clickOutside from "./functions/clickOutside.js";
 
 // ####################
 // ##### settings #####
@@ -18,5 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// -- handle triggers
 	handleTriggers('.sdi-flyout-trigger', hamburgerState);
+
+	// -- listen or click outside
+	clickOutside('.sdi-is-active');
 
 });
