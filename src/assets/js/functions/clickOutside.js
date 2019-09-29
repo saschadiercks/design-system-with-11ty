@@ -10,10 +10,10 @@ import removeClass from "./removeClass.js";
 export default function clickOutside(selector) {
 	document.addEventListener('click', function (event) {
 		if (!event.target.closest(selector) ) {
-			// click happened inside of elment
+			// click happened outside of element
 			removeClass(findAll(selector), selector.substring(1));
 		} else {
-			//click happened outside
+			//click happened inside
 
 		};
 	}, true);   // we're using captureing so this listener always get's activated first
