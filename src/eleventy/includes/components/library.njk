@@ -24,23 +24,46 @@
 								we need to OPEN the SECTION here to group the snippets
 								andd use the parentdrectory as an identifier
 							#}
-							<section id="{{ item | get_parentdirectory }}">
+							<section class="sdi-margin-bottom--50" id="{{ item | get_parentdirectory }}">
 								<h2>{{ item | get_parentdirectory }}</h2>
 
 								{# code and preview #}
 								{%- include "components/code/preview.njk" -%}
-								{%- include "components/code/markup.njk" -%}
+
+								<div class="sdi-collapse sdi-collapse--lit" id="code-{{ item | get_parentdirectory }}">
+									<div class="sdi-collapse__header">
+										<div class="sdi-collapse__button sdi-js-collapse-trigger" data-target="#code-{{ item | get_parentdirectory }}">
+											Show the code
+											<div class="sdi-collapse__icon">+</div>
+										</div>
+									</div>
+									<div class="sdi-collapse__main">
+										<div class="sdi-collapse__content">
+											{%- include "components/code/markup.njk" -%}
+										</div>
+									</div>
+								</div>
 						{% endif %}
 
 						{# we only want the desciption.md to be displayed #}
 						{% if item | get_filename == "description.md" %}
 
-								<hr/>
+								<div class="sdi-collapse sdi-collapse--lit" id="description-{{ item | get_parentdirectory }}">
+									<div class="sdi-collapse__header">
+										<div class="sdi-collapse__button sdi-js-collapse-trigger" data-target="#description-{{ item | get_parentdirectory }}">
+											Description
+											<div class="sdi-collapse__icon">+</div>
+										</div>
+									</div>
+									<div class="sdi-collapse__main">
+										<div class="sdi-collapse__content">
+											<h3 class="sdi-margin-bottom--25">When to use</h3>
+											{%- include "components/code/description.njk" -%}
+										</div>
+									</div>
+								</div>
 
-								<h3 class="sdi-margin-bottom--25">When to use</h3>
-								{%- include "components/code/description.njk" -%}
-
-								<p class="h5 sdi-time sdi-margin-bottom--0">Last modified: {{ latest_date | readable_date }}</p>
+								<p class="h5 sdi-time sdi-margin-bottom--0 sdi-margin-top">Last modified: {{ latest_date | readable_date }}</p>
 
 							{# we need to CLOSE the SECTION here to group the snippets #}
 							</section>
