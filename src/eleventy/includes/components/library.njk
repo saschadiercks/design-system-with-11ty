@@ -30,8 +30,6 @@
 								{# code and preview #}
 								{%- include "components/code/preview.njk" -%}
 
-								<hr class="sdi-margin-top"/>
-
 								<div class="sdi-collapse sdi-collapse--lit" id="code-{{ item | get_parentdirectory }}">
 									<div class="sdi-collapse__header">
 										<div class="sdi-collapse__button sdi-js-collapse-trigger" data-target="#code-{{ item | get_parentdirectory }}">
@@ -50,20 +48,10 @@
 						{# we only want the desciption.md to be displayed #}
 						{% if item | get_filename == "description.md" %}
 
-								<div class="sdi-collapse sdi-collapse--lit sdi-is-active" id="description-{{ item | get_parentdirectory }}">
-									<div class="sdi-collapse__header">
-										<div class="sdi-collapse__button sdi-js-collapse-trigger" data-target="#description-{{ item | get_parentdirectory }}">
-											When to use
-											<div class="sdi-collapse__icon">&#9660;</div>
-										</div>
-									</div>
-									<div class="sdi-collapse__main">
-										<div class="sdi-collapse__content">
-											<!--<h3 class="sdi-margin-bottom--25">When to use</h3>-->
-											{%- include "components/code/description.njk" -%}
-										</div>
-									</div>
-								</div>
+								<hr class="sdi-margin-top">
+
+								<h3 class="sdi-margin-bottom--25">When to use</h3>
+								{%- include "components/code/description.njk" -%}
 
 								<p class="h5 sdi-time sdi-margin-bottom--0 sdi-margin-top">Last modified: {{ latest_date | readable_date }}</p>
 
