@@ -15,25 +15,35 @@ $modal-footer-padding: $modal-header-padding !default;
 //---------------------
 // ###### Layout ######
 //---------------------
-.js .#{$prefix}modal { display: none; }
+.#{$js} {
+	.#{$prefix}modal {
+		left: 0;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		transition: all .3s ease-in-out;
+		visibility: hidden;
+		z-index: 99;
+	}
+
+	.#{$prefix}modal__overlay {
+		@include align-centered($position:fixed);
+		max-height: $modal-max-height;
+		max-width: $modal-max-width;
+		width: 90%;		// we're using values < 100, so have a gap to the viewport on smaller screens
+	}
+}
 
 .#{$prefix}modal.#{$is-active} {
-	display: block;
-	left: 0;
-	position: fixed;
-	top: 0;
-	z-index: 99;
+	opacity: 1;
+	visibility: visible;
 }
 
 .#{$prefix}modal__overlay {
-	@include align-centered($position:fixed);
 	background-color: $modal-background-color;
 	color: $modal-color;
 	display: flex;
 	flex-direction: column;
-	max-height: $modal-max-height;
-	max-width: $modal-max-width;
-	width: 90%;		// we're using values < 100, so have a gap to the viewport on smaller screens
 }
 
 .#{$prefix}modal__header {
