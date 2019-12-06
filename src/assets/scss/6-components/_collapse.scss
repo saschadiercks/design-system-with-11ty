@@ -26,6 +26,7 @@ $collapse-collapse-whitespace: 2px !default;
 }
 
 .#{$prefix}collapse__button {
+	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 	padding: $collapse-header-padding;

@@ -30,11 +30,13 @@
 								{# code and preview #}
 								{%- include "components/code/preview.njk" -%}
 
+								<hr class="sdi-margin-top"/>
+
 								<div class="sdi-collapse sdi-collapse--lit" id="code-{{ item | get_parentdirectory }}">
 									<div class="sdi-collapse__header">
 										<div class="sdi-collapse__button sdi-js-collapse-trigger" data-target="#code-{{ item | get_parentdirectory }}">
 											Show the code
-											<div class="sdi-collapse__icon">+</div>
+											<div class="sdi-collapse__icon">&#9660;</div>
 										</div>
 									</div>
 									<div class="sdi-collapse__main">
@@ -51,13 +53,13 @@
 								<div class="sdi-collapse sdi-collapse--lit" id="description-{{ item | get_parentdirectory }}">
 									<div class="sdi-collapse__header">
 										<div class="sdi-collapse__button sdi-js-collapse-trigger" data-target="#description-{{ item | get_parentdirectory }}">
-											Description
-											<div class="sdi-collapse__icon">+</div>
+											When to use
+											<div class="sdi-collapse__icon">&#9660;</div>
 										</div>
 									</div>
 									<div class="sdi-collapse__main">
 										<div class="sdi-collapse__content">
-											<h3 class="sdi-margin-bottom--25">When to use</h3>
+											<!--<h3 class="sdi-margin-bottom--25">When to use</h3>-->
 											{%- include "components/code/description.njk" -%}
 										</div>
 									</div>
