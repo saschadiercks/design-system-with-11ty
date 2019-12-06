@@ -17,3 +17,7 @@ $col: "#{$prefix}col" !default;
 // Active & inactive classnames
 $is-active: "#{$prefix}is-active" !default;
 $is-inactive: "#{$prefix}is-inactive" !default;
+
+// JS availability
+$js: "js" !default;
+$no-js: "no-js" !default;
