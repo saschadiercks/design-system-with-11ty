@@ -31,7 +31,7 @@ $container-position: initial !default;				// made configureable just in case we 
 }
 
 @if $container-bg != transparent {
-	.#{$prefix}container {
+	.#{$container} {
 		background-color: $container-bg;
 	}
 }
