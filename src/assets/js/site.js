@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// -- handle triggers
 	handleTriggers('.sdi-js-flyout-trigger', hamburgerState);
 	handleTriggers('.sdi-js-modal-trigger', false);
+	handleTriggers('.sdi-js-collapse-trigger', false);
 
 	// -- listen or click outside
 	clickOutside('.sdi-is-active');
