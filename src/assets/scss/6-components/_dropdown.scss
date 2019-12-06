@@ -15,7 +15,7 @@ $dropdown-main-translate-y: -1px !default;		// 0 to unset
 //---------------------
 // ###### Layout ######
 //---------------------
-.js .#{$prefix}dropdown__content { display: none; }
+.#{$js} .#{$prefix}dropdown__content { display: none; }
 
 .#{$prefix}dropdown.#{$is-active} .#{$prefix}dropdown__content {
 	display: block;

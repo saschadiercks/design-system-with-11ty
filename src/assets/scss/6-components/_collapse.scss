@@ -19,7 +19,7 @@ $collapse-collapse-whitespace: 2px !default;
 //---------------------
 // ###### Layout ######
 //---------------------
-.js .#{$prefix}collapse__main {
+.#{$js} .#{$prefix}collapse__main {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height $collapse-transition-speed ease;

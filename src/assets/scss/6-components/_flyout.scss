@@ -61,7 +61,7 @@ $flyout-link-class: "navigation__link" !default;		// prefix is added in selector
 		transform: translateX(-100%);
 		transition: transform $flyout-animation-speed ease;
 		width: $flyout-width;
-		z-index: 3;
+		z-index: 99;
 
 		// calculate padding
 		@if $flyout-padding != $flyout-padding-top {

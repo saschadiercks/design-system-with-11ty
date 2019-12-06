@@ -29,7 +29,7 @@ $scroll-top-pos-right: $gutter !default;
 	text-align: center;
 	text-decoration: none;
 	width: $scroll-top-min-size;
-	z-index: 9;
+	z-index: 1;
 }
 
 .#{$prefix}scroll-top__icon {
