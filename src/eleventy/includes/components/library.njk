@@ -50,7 +50,7 @@
 						{# we only want the desciption.md to be displayed #}
 						{% if item | get_filename == "description.md" %}
 
-								<div class="sdi-collapse sdi-collapse--lit" id="description-{{ item | get_parentdirectory }}">
+								<div class="sdi-collapse sdi-collapse--lit sdi-is-active" id="description-{{ item | get_parentdirectory }}">
 									<div class="sdi-collapse__header">
 										<div class="sdi-collapse__button sdi-js-collapse-trigger" data-target="#description-{{ item | get_parentdirectory }}">
 											When to use
