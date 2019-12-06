@@ -75,6 +75,7 @@ date: 2019-01-01
 
 <hr/>
 
+<div class="sdi-container sdi-container--narrow">
 <h2>Classnames / Variables</h2>
 <p>All <b>classnames</b> belonging to this design-system are prefixed, so we can mix it with another framework and distinguish just by looking at the class names. This might become handy. The default-prefix is <code>sdi-</code> and it is set in <code>1-settings/variables</code>. Classnames of containers and wrappers can be set there too - but you should propably not change them here to be updateable. They are  set with <code>!default</code> so they are acting as a fallback.</p>
 <p>The CSS is structured using <b>BEM</b> and <b>ITCSS</b> - as you might have guessed. All variables are set using <code>!default</code>, to make copying the Code and customizing it easy. If your comfortable using scss it should be easy for you to overwrite the values with your own vlaues in an additonal file.</p>
@@ -144,3 +145,4 @@ Here's a list of available tasks
 
 ## Code Highlighting
 We're using [prism.js](https://github.com/PrismJS/prism) to highlight the code. The nesseccary files are included in this repository. If you want to change the styling head to [https://prismjs.com/](https://prismjs.com/) and download the files you want. After that place them in `src/assets/3rdparty/prism` and run `gulp build`
+</div>
