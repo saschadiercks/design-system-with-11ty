@@ -33,5 +33,13 @@
   },
   "author": "Sascha Diercks",
   "license": "MIT",
-  "homepage": "https://github.com/saschadiercks/design-system-with-11ty/"
+  "homepage": "https://github.com/saschadiercks/design-system-with-11ty/",
+  "dependencies": {
+    "and": "0.0.3",
+    "autoprefixer": "^9.7.3",
+    "browserslist": "^4.8.2",
+    "caniuse-lite": "^1.0.30001015",
+    "i": "^0.3.6",
+    "npm": "^6.13.2"
+  }
 }
