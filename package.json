@@ -16,7 +16,7 @@
     "gulp-stylelint": "^8.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^2.0.0",
-    "luxon": "^1.8.2",
+    "luxon": "^2.5.2",
     "require-dir": "^1.2.0",
     "stylelint": "^9.10.1",
     "stylelint-order": "^2.0.0",
